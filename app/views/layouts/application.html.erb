@@ -22,6 +22,7 @@
     <!-- Header -->
     <div id="header">
     <!-- Logo, Name and Version -->
+    <h1>Shinkaya</h1>
     <!--<img src="/img/kaya_small.png" class="logo" />
     <img src="/img/kaya.gs.png" class="kayags" />-->
     <div class="kaya_version">v2.0.0 Alpha, Rebirth edition</div>
@@ -850,6 +851,7 @@ TODO
 <!--
 TODO
 -->
+<!--
 <div id="kaya-widget-tab" style="right: 0px;"><img src="/img/widgets.png" /></div>
 <div id="kaya-widget-bar" class="bottomleftradius" style="height: 81px; right: -251px;">
     <div id="widget-container">
@@ -864,116 +866,9 @@ TODO
 
     </div>
 </div>
+-->
 
-
-        <!-- User Header -->
-        <div id="user_header">
-    <!-- Avatar -->
-    <img class="current-user-avatar" src="https://www.gravatar.com/avatar/cab98968d5c09027621118590dfd6a06?default=mm&rating=pg&size=24" data-user="Smar" />
-    <!-- Nickname -->
-    <span class="item linked nickname" data-user="Smar">Smar</span>
-    <span class="separator">|</span>
-    <!-- Rank -->
-    <div class="button" id="rank_button">
-        <span class="item linked rank">8k</span>
-        <div id="rank_progress" class="popup-dialog item-menu">
-            <div class="shiv"></div>
-            <div class="head">
-                Rank progress
-            </div>
-            <div class="info loading">Loading...</div>
-            <div class="info error">We couldn't fetch your rank info. Try again!</div>
-            <div class="info progressbar">
-                <div class="rank-labels">
-                    <div class="left rank-from"></div>
-                    <div class="right rank-to"></div>
-                </div>
-                <div class="rank-progressbar"></div>
-                <br />
-                <div>
-                    voittoja luokituskorotukseen: <span class="wins-rankup"></span> (arvioitu)
-                </div>
-            </div>
-        </div>
-    </div>
-    <span class="separator">|</span>
-    <!-- Karma -->
-    <span class="item karma">58 karma</span>
-    <span class="separator">|</span>
-    <!-- Correspondence Go Inbox -->
-    <div class="button bg-hover" id="correspondence_button">
-        <span class="item entypo" title="Correspondence games">%</span>
-        <div id="correspondence_inbox" class="popup-dialog item-menu">
-            <div class="shiv"></div>
-            <div class="head">
-                Correspondence games
-            </div>
-            <div class="info loading">Loading...</div>
-            <div class="info error">We couldn't fetch your games. Try again!</div>
-            <div class="scrollable no-margin">
-                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
-                <div class="viewport"><div class="overview">
-                    <ul>
-                        <li class="template" style="display: none">
-                            <img src="" />
-                            <p class="top correspondence-nickname">
-                            </p>
-                            <p class="middle correspondence-data">
-                            </p>
-                            <p class="bottom correspondence-time">
-                            </p>
-                            <div class="button-panel">
-                                <a href="javascript: void(0);" class="confirm"><span>W</span></a>
-                                <a href="javascript: void(0);" class="reject red"><span>X</span></a>
-                            </div>
-                            <div class="loading-panel"><img src="/img/loading-round.gif" /></div>
-                        </li>
-                    </ul>
-                </div></div>
-            </div>
-            <div class="foot">
-                <a href="javascript: void(0);" id="correspondence-playing-games">Browse all games</a>
-            </div>
-        </div>
-    </div>
-    <!-- Message Inbox -->
-    <div class="button bg-hover" id="inbox_button">
-        <span class="item entypo" title="Private messages">:</span>
-        <div id="message_inbox" class="popup-dialog item-menu">
-            <div class="shiv"></div>
-            <div class="head">
-                Messages
-            </div>
-            <div class="info loading">Loading...</div>
-            <div class="info no-conversations">No messages yet!</div>
-            <div class="info error">We couldn't fetch your messages. Try again!</div>
-            <div class="scrollable no-margin">
-                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
-                <div class="viewport"><div class="overview">
-                    <ul>
-                        <li class="template" style="display: none">
-                            <img src="" />
-                            <p class="top message-nickname">
-                            </p>
-                            <p class="middle message">
-                            </p>
-                            <p class="bottom message-date">
-                            </p>
-                        </li>
-                    </ul>
-                </div></div>
-            </div>
-        </div>
-    </div>
-    <!-- Candy -->
-    <div class="button bg-hover">
-        <a href="http://kaya.gs/kayags/candy.php" target="_blank"><span class="item entypo pink" title="Candy <3">6</span></a>
-    </div>
-    <!-- Logout -->
-    <div class="button bg-hover">
-        <a href="/logout"><span class="item entypo red" title="Sign Out">*</span></a>
-    </div>
-</div>
+<%= render "user_info" %>
 
 <div id="correspondence-dialog" class="item-menu" style="display: none;">
     <div class="head">

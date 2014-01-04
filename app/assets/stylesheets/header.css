@@ -41,6 +41,11 @@
 .ie8 .basic-button-off-white:hover, .ie8 .basic-button-off-white:active, .ie8 .basic-button-off-white.active, .ie8 .basic-button-off-white.selected {
   background-color: #799256 !important; }
 
+#header h1 {
+    font-size: 1.8em;
+    padding: 0.5em;
+}
+
 /*
     .ie & {
         &:hover, &:active, &.active, &.selected {

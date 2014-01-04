@@ -172,7 +172,6 @@
 #user_header {
   position: absolute;
   z-index: 40;
-  top: -25px;
   height: 24px;
   right: 140px;
   padding-right: 3px;
@@ -267,7 +266,7 @@
     font-size: 32px;
     display: inline-block;
     position: relative;
-    top: -4px;
+    top: 4px;
     float: left;
     line-height: normal;
     color: #896;
