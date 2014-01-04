@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,vietnamese,greek,cyrillic,latin-ext,cyrillic-ext,greek-ext);
+/* line 3, ../../sass/_basic-button.scss */
+.basic-button, .basic-button-off-white {
+  display: inline-block;
+  padding: 5px 15px;
+  /*line-height: 20px;*/
+  border-top: 1px solid #bababa;
+  border-bottom: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1); }
+  /* line 13, ../../sass/_basic-button.scss */
+  .basic-button:hover, .basic-button-off-white:hover, .basic-button:active, .basic-button-off-white:active, .basic-button.active, .active.basic-button-off-white, .basic-button.selected, .selected.basic-button-off-white {
+    text-decoration: none;
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1); }
+  /* line 20, ../../sass/_basic-button.scss */
+  .ie .basic-button, .ie .basic-button-off-white {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc; }
+    /* line 23, ../../sass/_basic-button.scss */
+    .ie .basic-button:hover, .ie .basic-button-off-white:hover, .ie .basic-button:active, .ie .basic-button-off-white:active, .ie .basic-button.active, .ie .active.basic-button-off-white, .ie .basic-button.selected, .ie .selected.basic-button-off-white {
+      background-color: #fafafa; }
+
+/*
+    .basic-button-off-white {
+        @extend .basic-button;
+        background-color: $basic-button-off-white-background;
+        &:hover, &:active, &.active, &.selected {
+            background-color: $basic-button-off-white-hover-background;
+            color: $text-white;
+        }
+    }
+*/
+/* line 43, ../../sass/_basic-button.scss */
+.basic-button-off-white:hover, .basic-button-off-white:active, .basic-button-off-white.active, .basic-button-off-white.selected {
+  background-color: rgba(91, 122, 47, 0.8) !important;
+  color: white; }
+/* line 49, ../../sass/_basic-button.scss */
+.ie8 .basic-button-off-white:hover, .ie8 .basic-button-off-white:active, .ie8 .basic-button-off-white.active, .ie8 .basic-button-off-white.selected {
+  background-color: #799256 !important; }
+
+/*
+    .ie & {
+        &:hover, &:active, &.active, &.selected {
+            background: $icon-light-green;
+        }
+    }
+*/
+/* line 64, ../../sass/_basic-button.scss */
+.button-note {
+  float: right;
+  padding: 1px 4px 2px;
+  margin: 1px 0 0 4px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  line-height: 12px;
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url("/fonts/entypo-webfont.eot");
+  src: url("/fonts/entypo-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/entypo-webfont.woff") format("woff"), url("/fonts/entypo-webfont.ttf") format("truetype"), url("/fonts/entypo-webfont.svg#EntypoRegular") format("svg"); }
+
+@font-face {
+  font-family: 'AierbazziRegular';
+  src: url("/fonts/aierbazzi-webfont.eot");
+  src: url("/fonts/aierbazzi-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/aierbazzi-webfont.woff") format("woff"), url("/fonts/aierbazzi-webfont.ttf") format("truetype"), url("/fonts/aierbazzi-webfont.svg#AierbazziRegular") format("svg"); }
+
+@font-face {
+  font-family: 'EfonRegular';
+  src: url("/fonts/EFON-webfont.eot");
+  src: url("/fonts/EFON-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/EFON-webfont.woff") format("woff"), url("/fonts/EFON-webfont.ttf") format("truetype"), url("/fonts/EFON-webfont.svg#EfonRegular") format("svg"); }
+
+/* line 34, ../../sass/_fonts.scss */
+.font-bold {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+  font-weight: 600; }
+
+/* line 38, ../../sass/_fonts.scss */
+.ie8 .font-bold {
+  font-weight: bold; }
+
+/* line 5, ../../sass/header.scss */
+.link, #header a:link:hover {
+  cursor: pointer;
+  text-decoration: underline; }
+
+/* line 10, ../../sass/header.scss */
+#header {
+  line-height: 1;
+  font-size: 13px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+  color: #444444;
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* visible height about 73px */
+  height: 53px;
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  background: #DDD; }
+  /* line 36, ../../sass/header.scss */
+  #header img.logo {
+    position: absolute;
+    left: 40px;
+    height: 58px;
+    z-index: 10; }
+  /* line 43, ../../sass/header.scss */
+  #header img.kayags {
+    position: absolute;
+    top: 9px;
+    left: 75px;
+    z-index: 10; }
+  /* line 50, ../../sass/header.scss */
+  #header div.kaya_version {
+    font-size: 9px;
+    color: #9A9;
+    position: absolute;
+    left: 180px;
+    bottom: 10px; }
+  /* line 58, ../../sass/header.scss */
+  #header div.stripe {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    border-style: solid none;
+    border-color: whiteSmoke;
+    border-width: 1px;
+    background-color: #a1b18b; }
+  /* line 70, ../../sass/header.scss */
+  #header ul {
+    margin: 0;
+    padding: 0;
+    border: none; }
+  /* line 76, ../../sass/header.scss */
+  #header a {
+    color: inherit;
+    text-decoration: none; }
+  /* line 85, ../../sass/header.scss */
+  #header ul#main_menu {
+    position: absolute;
+    top: 23px;
+    left: 300px;
+    z-index: 10; }
+    /* line 91, ../../sass/header.scss */
+    #header ul#main_menu li {
+      list-style: none; }
+    /* line 95, ../../sass/header.scss */
+    #header ul#main_menu > li {
+      display: block;
+      float: left;
+      background-color: #a1b18b;
+      padding: 5px 15px;
+      color: white;
+      margin-right: 5px;
+      position: relative;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-width: 1px;
+      border-style: solid solid none;
+      border-color: #ddd; }
+      /* line 111, ../../sass/header.scss */
+      #header ul#main_menu > li:hover {
+        border-color: white; }
+        /* line 114, ../../sass/header.scss */
+        #header ul#main_menu > li:hover ul {
+          display: block; }
+      /* line 119, ../../sass/header.scss */
+      #header ul#main_menu > li:not(:hover) ul {
+        display: none; }
+      /* line 123, ../../sass/header.scss */
+      #header ul#main_menu > li ul.placeholder {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 23px;
+        height: 5px;
+        background-color: #a1b18b; }
+      /* line 132, ../../sass/header.scss */
+      #header ul#main_menu > li ul:not(.placeholder) {
+        width: 270px;
+        padding: 0px 15px;
+        position: absolute;
+        left: -1px;
+        top: 28px;
+        background-color: #a1b18b;
+        border: 1px solid white;
+        border-top: none; }
+        /* line 145, ../../sass/header.scss */
+        #header ul#main_menu > li ul:not(.placeholder) > li.section {
+          height: 14px;
+          padding: 3px 0px;
+          color: #CEC; }
+          /* line 150, ../../sass/header.scss */
+          #header ul#main_menu > li ul:not(.placeholder) > li.section div {
+            height: 8px;
+            border-bottom: 1px solid #A5C0A5; }
+            /* line 154, ../../sass/header.scss */
+            #header ul#main_menu > li ul:not(.placeholder) > li.section div span {
+              background-color: #a1b18b;
+              padding-right: 10px; }
+        /* line 161, ../../sass/header.scss */
+        #header ul#main_menu > li ul:not(.placeholder) > li.buttons {
+          overflow: auto;
+          padding: 5px 0px 5px; }
+          /* line 164, ../../sass/header.scss */
+          #header ul#main_menu > li ul:not(.placeholder) > li.buttons a {
+            display: block;
+            float: left;
+            width: 130px;
+            padding-bottom: 10px; }
+          /* line 171, ../../sass/header.scss */
+          #header ul#main_menu > li ul:not(.placeholder) > li.buttons span {
+            display: block;
+            float: left;
+            width: 130px;
+            color: lightgray; }
+  /* line 183, ../../sass/header.scss */
+  #header div#menu_shadow {
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4); }

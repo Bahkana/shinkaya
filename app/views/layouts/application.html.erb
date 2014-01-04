@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= csrf_meta_tags %>
+        <title>Shinkaya</title>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--<link rel="icon" type="image/png" href="/img/favicon.png" />-->
+
+        <!--[if IE]>
+            <script>document.documentElement.className += " ie ie" + parseInt(navigator.appVersion.split("MSIE")[1]);</script>
+            <script src="/js/html5.js"></script>
+        <![endif]-->
+        <!-- is this useful? <script src="/js/matchMedia.js"></script> -->
+    </head>
+    <body>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <!-- Header -->
+    <div id="header">
+    <!-- Logo, Name and Version -->
+    <!--<img src="/img/kaya_small.png" class="logo" />
+    <img src="/img/kaya.gs.png" class="kayags" />-->
+    <div class="kaya_version">v2.0.0 Alpha, Rebirth edition</div>
+
+    <!-- Menu -->
+    <ul id="main_menu">
+        <li>
+            Collaboration
+            <ul class="placeholder"></ul>
+            <ul>
+                <li class="section">
+                    <div><span>Feedback</span></div>
+                </li>
+                <li class="buttons">
+                    <a href="https://kaya.uservoice.com/forums/130479-ideas-and-suggestions-for-kaya" target="_blank">UserVoice</a>
+                    <a href="/tweaki/" target="_blank">Tweaki</a>
+                </li>
+                <li class="section">
+                    <div><span>Collaborate</span></div>
+                </li>
+                <li class="buttons">
+                    <a href="https://github.com/conanbatt/OpenKaya" target="_blank">OpenKaya</a>
+                    <a href="https://www.transifex.com/projects/p/kaya/" target="_blank">Transifex</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Resources
+            <ul class="placeholder"></ul>
+            <ul>
+                <li class="section">
+                    <div><span>Server info</span></div>
+                </li>
+                <li class="buttons">
+                    <a href="/faq/" target="_blank">FAQ</a>
+                    <a href="/changelog/" target="_blank">Changelog</a>
+                </li>
+                <li class="section">
+                    <div><span>Follow us</span></div>
+                </li>
+                <li class="buttons">
+                    <a href="https://twitter.com/KayaGoServer" target="_blank"><del>Twitter</del></a>
+                    <a href="http://kayags.blogspot.com" target="_blank"><del>Blog</del></a>
+                </li>
+                <li class="section">
+                    <div><span>Dashboards</span></div>
+                </li>
+                <li class="buttons">
+
+                <span><del>Collaborator</del></span>
+
+
+                <span><del>Administrator</del></span>
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="menu_shadow"></div>
+
+    <!-- Stripe -->
+    <div class="stripe"></div>
+</div>
+
+
+<!-- Content -->
+<div id="content"><div>
+
+    <%= yield %>
+<!-- Content End -->
+</div></div>
+
+
+
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js" type="text/javascript"></script>
+<script src="/js/lib/jquery.tinyscrollbar-1.67-with-relative-bottom-minthumb-sizeadjust.js"></script>
+<script src="/js/lib/modernizr-custom.js"></script>
+<script src='/js/layout_1353108375.js'></script>
+
+<!-- Translate -->
+<!-- TODO: translations -->
+<!--
+<script type="text/javascript" src="/js/lib/jquery.translate.min.js"></script>
+<script src='/js/kaya_translate_1346076860.js'></script>
+<script src='/js/kaya_helpers_1355519794.js'></script>
+-->
+
+<!-- Disconnection Dialog -->
+<!-- TODO
+<div id="disconnected-help-dialog" style="display: none;" title="Et onnistunut yhdistämään Kaya.gs:ään!">
+    You logged in successfully but the server cant reach you!
+
+    <ol>
+        <li>
+            Please check the <a href="/faq#troubles" target="_black">FAQ Troubleshooting</a> for more information.
+        </li>
+
+        <li>
+            Ultimately, if you are behind a proxy/public network, you can try Safe Mode. Activate it on your <a target="_blank" href="/users/Smar">profile settings</a>.
+        </li>
+        <li>
+            If problems persist you can try catching us at the <a href="http://webchat.freenode.net/?nick=Smar&channels=kaya.gs&uio=MTE9ODIdf" target="_blank">Kaya.gs IRC Channel</a>
+        </li>
+
+
+    </ol>
+    <div class="reconnection" style="display: none;">
+        Retrying in <span class="retry-timer">00:00</span> (<span class="retry-status waiting">waiting</span>)
+    </div>
+
+</div>
+-->
+
+
+
+<!--
+TODO
+<script src='/js/user_list_1348869955.js'></script>
+-->
+
+<!--
+TODO
+<div style="display:none;" class="user_list_tooltip">
+    <table><tr>
+        <td>
+            <img class="avatar" src="" width="40" height="40" />
+        </td>
+        <td>
+            <span class="nickname"></span><sup class="rank"></sup>
+            <br /><span class="AccountKanji"></span>: <span class="account_type"></span>
+            <br />Karma: <span class="karma"></span>
+        </td>
+    </tr></table>
+</div>
+-->
+
+<!--
+TODO
+<div style="display:none;" id="search_user" title="Search a User">
+    <form action="/user/find" method="POST">
+        <table class="search_form"><tr>
+            <th><label for="find_by_nickname">Nickname:</label></th>
+            <td><input id="find_by_nickname" class="rounded" type="text" /></td>
+            <td><img src="/img/loading.gif" style="display: none;" /></td>
+        </tr></table>
+    </form>
+    <div id="search_user_result">
+        <hr class="main-hr" />
+        <table class="search_result">
+            <tr>
+                <td class="avatar"><img class="avatar" src="" width="40" height="40" /></td>
+                <td class="info">
+                <table class="info">
+                    <tr><td><a class="username" target="_blank" href=""></a><sup class="rank">(<span></span>)</sup></td></tr>
+                    <tr><td><span class="AccountKanji"></span><span>: </span><span class="account_type"></span></td></tr>
+                    <tr><td><img class="karma_image" src="" /><span>: </span><span class="karma"></span></td></tr>
+                </table>
+                </td>
+                <td class="actions" id="search_user_actions"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="search_user_error">
+        <hr class="main-hr" />
+        <span></span>
+    </div>
+</div>
+-->
+
+<!--
+TODO
+<div style="display:none;" id="user_list_style" page="main">
+</div>
+-->
+
+<!--
+TODO
+<li style="display: none;" id="user_list_item_template" data-user="">
+    <span class="name"><span></span><b></b></span>
+    <span class="type" title=""></span>
+    <img class="karma" title="" src="" />
+    <span class="karma"></span>
+    <div class="panel">
+        <a class="message" title="Message"><span>Message</span></a>
+        <a class="profile" title="Profile"><span>Profile</span></a>
+        <a class="friend" title="Friend"><span>Friend</span></a>
+        <a class="karma" title="Karma"><span>Karma</span></a>
+        <a class="challenge" title="Challenge"><span>Challenge</span></a>
+        <a class="muzzle" title="Muzzle"><span>Muzzle</span></a>
+        <img class="avatar" src="" />
+    </div>
+</li>
+-->
+
+
+<!--
+TODO
+<script src='/js/gommander_1347733805.js'></script>
+
+<script src='/js/game_list_1356722746.js'></script>
+-->
+
+
+<!-- GoSpeed -->
+<!--
+TODO
+<link rel="stylesheet" type="text/css" href="/gospeed/css/style.css"/>
+<script src='/gospeed/js/gospeed_1359145207.js'></script>
+<script src='/gospeed/js/govalidate_1346076860.js'></script>
+<script src='/gospeed/js/goban_1346076860.js'></script>
+<script src='/gospeed/js/gotime_1355434814.js'></script>
+<script src='/gospeed/js/utils_1359145207.js'></script>
+<script src='/gospeed/js/stone_1346076860.js'></script>
+<script src='/gospeed/js/score_1346076860.js'></script>
+<script src='/gospeed/js/estimator_1358547391.js'></script>
+<script src='/gospeed/js/sgf_1359145207.js'></script>
+<script src='/gospeed/js/gographic_1359145207.js'></script>
+<script src='/gospeed/js/graphic_engines/html_1346076860.js'></script>
+<script src='/gospeed/js/graphic_engines/canvas_1352496499.js'></script>
+<script src='/gospeed/js/timers/timer_1346076860.js'></script>
+<script src='/gospeed/js/timers/absolute_1346076860.js'></script>
+<script src='/gospeed/js/timers/fischer_1346076860.js'></script>
+<script src='/gospeed/js/timers/byoyomi_1346076860.js'></script>
+<script src='/gospeed/js/timers/hourglass_1346076860.js'></script>
+-->
+
+<!--
+<div id="game-info">
+    <div class="tabs">
+        <ul>
+            <li><a href="#game-info-div-regular" id="game-info-tab-regular"></a></li>
+            <li><a href="#game-info-div-league" id="game-info-tab-league"></a></li>
+            <li><a href="#game-info-div-correspondence" id="game-info-tab-correspondence"></a></li>
+        </ul>
+        <div id="game-info-div-regular" class="game-info-panel" panel-type="regular">
+            <table>
+                <tr>
+                    <td colspan="3"><span class="notice"></span></td>
+                </tr>
+                <tr>
+                    <th>Luokitettu?</th>
+                    <td colspan="2">
+                        <input class="game-info-rated" data-field="rated" type="checkbox" checked="checked" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Koko</th>
+                    <td colspan="2">
+                        <select class="game-info-size" data-field="size">
+                            <option value="9">9x9</option>
+                            <option value="13">13x13</option>
+                            <option value="19" selected="">19x19</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Säännöt</th>
+                    <td colspan="2">
+                        <select class="game-info-ruleset" data-field="ruleset">
+                            <option value="Japanese">japanilainen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Aikajärjestelmä</th>
+                    <td>
+                        <select class="game-info-time-system" data-field="time_settings-name">
+                            <option value="free">Vapaa</option>
+                            <option value="absolute">Äkkikuolema</option>
+                            <option value="fischer">Fischer</option>
+                            <option value="byoyomi">Byo-yomi</option>
+                            <option value="hourglass">Tiimalasi</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" id="time-system-help-button">&nbsp;</a>
+                    </td>
+                </tr>
+                <tr class="game-info-main-time">
+                    <th>Pääaika (minuutteja)</th>
+                    <td colspan="2">
+                        <input min="0" max="120" data-field="time_settings-time" type="number" />
+                    </td>
+                </tr>
+                <tr class="game-info-ot-fischer" style="display:none;">
+                    <th>Bonus (sekunteja) </th>
+                    <td colspan="2">
+                        <input min="4" max="30"  data-field="time_settings-bonus" type="number" />
+                    </td>
+                </tr>
+                <tr class="game-info-ot-byoyomi" style="display:none;">
+                    <th>Byo-yomi (jaksoja / sekunteja)</th>
+                    <td colspan="2">
+                        <input type="number" data-field="time_settings-periods" /> / <input min="10" type="number" data-field="time_settings-byoyomi" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Anna maksimissaan tasoitusta</th>
+                    <td colspan="2">
+                        <select data-field="handicap_stones_gap-give_up_to">
+                            <option value="0">0 Stones</option>
+                            <option value="2">2 Stones</option>
+                            <option value="3">3 Stones</option>
+                            <option value="4">4 Stones</option>
+                            <option value="5">5 Stones</option>
+                            <option value="6">6 Stones</option>
+                            <option value="7">7 Stones</option>
+                            <option value="8">8 Stones</option>
+                            <option value="9" selected="selected">9 Stones</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ota maksimissaan tasoitusta</th>
+                    <td colspan="2">
+                        <select data-field="handicap_stones_gap-take_up_to">
+                            <option value="0">0 Stones</option>
+                            <option value="2">2 Stones</option>
+                            <option value="3">3 Stones</option>
+                            <option value="4">4 Stones</option>
+                            <option value="5">5 Stones</option>
+                            <option value="6">6 Stones</option>
+                            <option value="7">7 Stones</option>
+                            <option value="8">8 Stones</option>
+                            <option value="9" selected="selected">9 Stones</option>
+                        </select>
+                    </td>
+                </tr>
+                <! --
+                <tr>
+                    <td>Allow weaker opponents?<input type="checkbox" checked="checked" disabled="true"></input></td>
+                    <td>Allow stronger opponents?<input type="checkbox" checked="checked" disabled="true"></input></td>
+                </tr>
+                -- >
+                <tr>
+                    <th title="Only this user can accept your match" style="cursor: help;">
+                        Haasta (nimimerkki)
+                    </th>
+                    <td colspan="2">
+                        <input type="text" data-field="challengee" />
+                    </td>
+                </tr>
+            </table>
+            <div class="game-info-challenge-conditions disabled"><a href="javascript:void(0);">Haasteen ehdot</a></div>
+            <div class="game-info-conditions-panel" style="display: none;">
+                <table>
+                    <tr>
+                        <th>Vastustajan väri</th>
+                        <td colspan="2">
+                            <select data-field="challenge_conditions-opponent_color" disabled="disabled">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tasoitus</th>
+                        <td colspan="2">
+                            <select data-field="challenge_conditions-handicap" disabled="disabled">
+                                <option value="0">Even</option>
+                                <option value="2">2 Stones</option>
+                                <option value="3">3 Stones</option>
+                                <option value="4">4 Stones</option>
+                                <option value="5">5 Stones</option>
+                                <option value="6">6 Stones</option>
+                                <option value="7">7 Stones</option>
+                                <option value="8">8 Stones</option>
+                                <option value="9">9 Stones</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Komi</th>
+                        <td colspan="2">
+                            <input type="number" min="-999" max="999" data-field="challenge_conditions-komi" value="6" disabled="disabled" />.5
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-panel">
+                <a href="javascript: void(0);" class="save-and-start"></a>
+                <a href="javascript: void(0);" class="cancel"></a>
+            </div>
+        </div>
+        <div id="game-info-div-league" class="game-info-panel" panel-type="league">
+            <table>
+                <tr>
+                    <td colspan="3"><span class="notice"></span></td>
+                </tr>
+                <tr>
+                    <th>Liiga</th>
+                    <td>
+                        <select id="game-info-league" data-field="league">
+                        </select>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" id="league-help-button">&nbsp;</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Pääaika (minuutteja)</th>
+                    <td colspan="2">
+                        <input min="25" max="45" data-field="main_time" type="number" value="25" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Byo-yomi (jaksoja / sekunteja)</th>
+                    <td colspan="2">
+                        5 / 30
+                    </td>
+                </tr>
+                <tr>
+                    <th title="Only this user can accept your match" style="cursor: help;">
+                        Haasta (nimimerkki)
+                    </th>
+                    <td colspan="2">
+                        <select id="league-challenge" data-field="league_challenge">
+                            <option value="">---</option>
+                        </select>
+                        <img src="/img/loading.gif" id="league-challenge-wait" style="display: none;" />
+                    </td>
+                </tr>
+            </table>
+            <div class="button-panel">
+                <a href="javascript: void(0);" class="start"></a>
+                <a href="javascript: void(0);" class="cancel"></a>
+            </div>
+            <div class="league-info">
+                <span></span>
+                <br /><br /><img src="/img/loading.gif" style="display: none;" />
+            </div>
+        </div>
+        <div id="game-info-div-correspondence" class="game-info-panel" panel-type="correspondence">
+            <table>
+                <tr>
+                    <td colspan="3"><span class="notice"></span></td>
+                </tr>
+                <tr>
+                    <th>Luokitettu?</th>
+                    <td colspan="2">
+                        <input class="game-info-rated" data-field="rated" type="checkbox" checked="checked" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Koko</th>
+                    <td colspan="2">
+                        <select class="game-info-size" data-field="size">
+                            <option value="9">9x9</option>
+                            <option value="13">13x13</option>
+                            <option value="19" selected="">19x19</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Säännöt</th>
+                    <td colspan="2">
+                        <select class="game-info-ruleset" data-field="ruleset">
+                            <option value="Japanese">japanilainen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Aikajärjestelmä</th>
+                    <td>
+                        <select class="game-info-time-system" data-field="time_settings-name">
+                            <option value="correspondence_fischer">Fischer</option>
+                        </select>
+                    </td>
+                    <td>
+                        <a href="javascript: void(0);" id="time-system-help-button">&nbsp;</a>
+                    </td>
+                </tr>
+                <tr class="game-info-main-time">
+                    <th>Main time (days)</th>
+                    <td colspan="2">
+                        <input min="1" max="14" data-field="time_settings-time" type="number" />
+                    </td>
+                </tr>
+                <tr class="game-info-ot-fischer" style="display:none;">
+                    <th>Bonus (hours) / Limit (days) </th>
+                    <td colspan="2">
+                        <input min="24" max="72"  data-field="time_settings-bonus" type="number" /> / <input min="5" max="30"  data-field="time_settings-limit" type="number" />
+                    </td>
+                </tr>
+                <tr class="game-info-ot-byoyomi" style="display:none;">
+                    <th>Byo-yomi (jaksoja / sekunteja)</th>
+                    <td colspan="2">
+                        <input type="number" data-field="time_settings-periods" /> / <input min="10" type="number" data-field="time_settings-byoyomi" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>Anna maksimissaan tasoitusta</th>
+                    <td colspan="2">
+                        <select data-field="handicap_stones_gap-give_up_to">
+                            <option value="0">0 Stones</option>
+                            <option value="2">2 Stones</option>
+                            <option value="3">3 Stones</option>
+                            <option value="4">4 Stones</option>
+                            <option value="5">5 Stones</option>
+                            <option value="6">6 Stones</option>
+                            <option value="7">7 Stones</option>
+                            <option value="8">8 Stones</option>
+                            <option value="9" selected="selected">9 Stones</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Ota maksimissaan tasoitusta</th>
+                    <td colspan="2">
+                        <select data-field="handicap_stones_gap-take_up_to">
+                            <option value="0">0 Stones</option>
+                            <option value="2">2 Stones</option>
+                            <option value="3">3 Stones</option>
+                            <option value="4">4 Stones</option>
+                            <option value="5">5 Stones</option>
+                            <option value="6">6 Stones</option>
+                            <option value="7">7 Stones</option>
+                            <option value="8">8 Stones</option>
+                            <option value="9" selected="selected">9 Stones</option>
+                        </select>
+                    </td>
+                </tr>
+                <! --
+                <tr>
+                    <td>Allow weaker opponents?<input type="checkbox" checked="checked" disabled="true"></input></td>
+                    <td>Allow stronger opponents?<input type="checkbox" checked="checked" disabled="true"></input></td>
+                </tr>
+                -- >
+                <tr>
+                    <th title="Only this user can accept your match" style="cursor: help;">
+                        Haasta (nimimerkki)
+                    </th>
+                    <td colspan="2">
+                        <input type="text" data-field="challengee" />
+                    </td>
+                </tr>
+            </table>
+            <div class="game-info-challenge-conditions" class="disabled"><a href="javascript:void(0);">Haasteen ehdot</a></div>
+            <div class="game-info-conditions-panel" style="display: none;">
+                <table>
+                    <tr>
+                        <th>Vastustajan väri</th>
+                        <td colspan="2">
+                            <select data-field="challenge_conditions-opponent_color" disabled="disabled">
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tasoitus</th>
+                        <td colspan="2">
+                            <select data-field="challenge_conditions-handicap" disabled="disabled">
+                                <option value="0">Even</option>
+                                <option value="2">2 Stones</option>
+                                <option value="3">3 Stones</option>
+                                <option value="4">4 Stones</option>
+                                <option value="5">5 Stones</option>
+                                <option value="6">6 Stones</option>
+                                <option value="7">7 Stones</option>
+                                <option value="8">8 Stones</option>
+                                <option value="9">9 Stones</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Komi</th>
+                        <td colspan="2">
+                            <input type="number" min="-999" max="999" data-field="challenge_conditions-komi" value="6" disabled="disabled" />.5
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-panel">
+                <a href="javascript: void(0);" class="save-and-start"></a>
+                <a href="javascript: void(0);" class="cancel"></a>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<!--
+<div style="display:none;" title="Available Time Systems" id="time_systems_help_dialog" class="help-dialog">
+
+        <div>
+            <strong>Free</strong>
+            <p>There is no clock running. The game can take as long as the players want it to.</p>
+        </div>
+
+        <div>
+            <strong>Absolute</strong>
+            <p>Absolute time only has a fixed time for each player. The player loses once his clock reaches 0.</p>
+        </div>
+
+        <div>
+            <strong>Fischer</strong>
+            <p>Fischer time consists of a basic main time and each time a player makes a move the Bonus is added to it. The player loses once his clock reaches 0.</p>
+        </div>
+
+        <div>
+            <strong>Byoyomi</strong>
+            <p>Byoyomi consists of a basic main time and byoyomi periods. Once the main time is over, the player starts overtime and he has to play within the byoyomi time. If he misses the time, he will lose a period. The player loses after his clock reaches 0 and he has no more periods.</p>
+        </div>
+
+        <div>
+            <strong>Hourglass</strong>
+            <p>In Hourglass each second a player takes is added to his opponent time. A player loses after the difference between his clock and his opponents exceeds the differential time. Kaya.gs has a slight modification: if you play, you will at least have 10 seconds to play your next move.</p>
+        </div>
+
+</div>
+-->
+
+<!--
+<div style="display:none;" title="ASR League" id="leagues_help_dialog" class="help-dialog">
+
+    <div>
+        <strong> All Ranks are welcome</strong>
+        <p>The ASR league is geared towards learning and competing and to those that want to both study and play seriously. For more information visit the <a href="http://www.advancedstudyroom.com" target="_blank">ASR site</a>.
+        </p>
+    </div>
+
+    <div>
+        <strong>Requirements</strong>
+
+        <p>• You must play at least 4 league games before 23:59 GMT of the last day of each month.</p>
+
+        <p>• You may play an opponent 2 times per month.</p>
+
+        <p>• Games are even, 25-45 mins plus 5 x 30 secs byo yomi</p>
+
+        <p>• The league is point based. Check the rules details <a target="_blank" href="http://www.advancedstudyroom.com/ASR/kaya-league/rules">here</a>.
+    </div>
+    <div>
+        <strong>Sign-up</strong>
+        <p>
+            To sign up send a pm to one of the ASR admins which are listed <a target="_blank" href="http://www.advancedstudyroom.com/ASR/asr-admin-team">here</a>.
+        </p>
+    </div>
+    <div>
+        <strong>On Kaya</strong>
+        <p> ASR League games are automatically reported to the ASR. </p>
+        <p> Only other people in the league can accept your challenge, and you can also challenge a specific individual from your class. </p>
+        <p>If you experience issues of any kind, voice it in the Support Channel.</p>
+    </div>
+
+</div>
+-->
+
+<!--
+<div style="display:none;" id="negotiation_window">
+   <table>
+        <tr>
+            <th>Black</th>
+            <td><input id="negotiation_black_player" type="text"></input></td>
+        </tr>
+        <tr>
+            <th>White</th>
+            <td><input id="negotiation_white_player" type="text"></input></td>
+        </tr>
+        <tr>
+            <td><button id="switch_players">switch</button></td>
+        </tr>
+
+        <tr>
+            <th>Handicap</th>
+            <td><input id="negotiation_handicap" max="9" min= "0" type="number"></input></td>
+        </tr>
+            <th>Komi</th>
+            <td><input id="negotiation_komi" max="100" min= "-100" type="number"></input></td>
+        <tr>
+        </tr>
+    </table>
+</div>
+-->
+
+<!--
+<div style="display:none;" id="board_preview_holder"></div>
+-->
+
+<!-- Game List Entries Templates -->
+<!--
+<div id="tpl-game-list-entries">
+    <ol>
+        <li class="compact-header">
+            <span class="white">Valkoinen</span><span class="black">Musta</span><span class="owner"></span><span class="size">Koko</span><span class="handicap">Tasoitus</span><span class="moves">Siirrot</span><span class="observers">Katsojat</span>
+        </li>
+        <li class="compact-title">
+            <span class="group"></span>
+        </li>
+        <li class="compact">
+            <span class="white"></span><span class="black"></span><span class="owner"></span><span class="size"></span><span class="handicap"></span><span class="moves"></span><span class="observers"></span><a href="javascript: void(0);" target="_blank" class="compact-link watch" title="Watch"><span></span></a>
+        </li>
+        <li class="open-game">
+            <a class="white player-icon owner" data-user=""><img src="" /></a>
+            <div class="players">
+                <a class="white owner" data-user=""><span></span><b></b></a>
+                <p class="waiting"><span></span></p>
+            </div>
+            <div class="status-bar">
+                <span class="type"></span><br />
+                <span class="time"></span><br />
+                <span class="handicap"></span>
+            </div>
+            <div class="game-entry-buttons">
+                <a class="play-game" href="javascript: void(0);" target="_blank">Pelaa&nbsp;&raquo;</a>
+                <a class="trail-game" href="javascript: void(0);" target="_blank">Seuraa</a>
+            </div>
+        </li>
+        <li class="ongoing-game">
+            <a class="white player-icon" data-user=""><img src="" /></a>
+            <a class="black player-icon" data-user=""><img src="" /></a>
+            <div class="players">
+                <a class="white" data-user=""><span></span><b></b></a>
+                <span class="vs">vs.</span>
+                <a class="black" data-user=""><span></span><b></b></a>
+            </div>
+            <a class="observe-game" target="_blank"><div class="board-preview"></div></a>
+            <a class="status-bar" target="_blank">
+                <span class="age"></span><br />
+                <span class="speed"></span><br />
+                <span class="observers"></span>
+            </a>
+        </li>
+        <li class="replay-game">
+            <div class="white player-icon"><img src="" /></div>
+            <div class="black player-icon"><img src="" /></div>
+            <div class="players">
+                <div class="white"><span></span><b></b></div>
+                <span class="vs">vs.</span>
+                <div class="black"><span></span><b></b></div>
+            </div>
+            <a class="observe-game" target="_blank"><div class="board-preview"></div></a>
+            <a class="status-bar" target="_blank">
+                <span>Replay</span><br />
+                <span class="speed"></span><br />
+                <span class="observers"></span>
+            </a>
+        </li>
+        <li class="sandbox-game">
+            <a class="white player-icon owner" data-user=""><img src="" /></a>
+            <div class="players">
+                <a class="white owner" data-user=""><span></span><b></b></a>
+                <p class="karma"><span></span></p>
+            </div>
+            <div class="purpose-bar" title="Sandbox purpose">
+                <span></span>
+            </div>
+            <a class="observe-game" target="_blank"><div class="board-preview"></div></a>
+            <a class="status-bar" target="_blank">
+                <span>Sandbox</span><br />
+                <span class="age"></span><br />
+                <span class="observers"></span>
+            </a>
+        </li>
+        <li class="broadcast-game">
+            <div class="white player-icon"><img src="" /></div>
+            <div class="black player-icon"><img src="" /></div>
+            <div class="players">
+                <div class="white"><span></span><b></b></div>
+                <span class="vs">vs.</span>
+                <div class="black"><span></span><b></b></div>
+            </div>
+            <a class="owner player-icon" data-user=""><img src="" /></a>
+            <a class="broadcaster" data-user=""><span></span>'s<b></b></a>
+            <a class="status-bar" target="_blank">
+                <span>Video Broadcast</span><br />
+                <span class="observers"></span>
+            </a>
+        </li>
+    </ol>
+</div>
+-->
+
+<!--
+        <script src='/js/chat_window_1346076860.js'></script>
+        -->
+
+        <!-- Widgets -->
+
+        <!--
+        <script src='/js/chat_binder_1349557636.js'></script>
+        -->
+
+        <!-- JQuery -->
+
+        <!--
+        <script src="/js/lib/json2.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery-ui-1.8.21.custom.min.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery.contextMenu.js"></script>
+        <div id="PM" style='display: none;'>
+
+</div>
+-->
+
+<!--
+<link type="text/css" href="/css/jquery.ui.chatbox.css" rel="stylesheet" />
+<script type="text/javascript" src="/js/lib/jquery.ui.chatbox.js"></script>
+-->
+
+
+<!--
+<script src='/js/private_chat_1355519794.js'></script>
+
+        <script src="/js/lib/application.js" type="text/javascript" charset="utf-8"></script>
+        -->
+        <!-- Widget controller -->
+        <!--
+<script src='/js/widgets_1346454139.js'></script>
+-->
+
+<!-- Libraries -->
+<!--
+<script type="text/javascript" src="/js/lib/jcarousellite.min.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.countdown.min.js"></script>
+-->
+
+<!-- Kaya Player -->
+<!--
+<script src='/js/kaya_player_1353675633.js'></script>
+<link rel="stylesheet" type="text/css" href="/css/kaya_player.css" />
+-->
+
+<!-- Widget Tab -->
+<!--
+TODO
+-->
+<div id="kaya-widget-tab" style="right: 0px;"><img src="/img/widgets.png" /></div>
+<div id="kaya-widget-bar" class="bottomleftradius" style="height: 81px; right: -251px;">
+    <div id="widget-container">
+
+
+                <div id="widget-countdown" widget="countdown"></div>
+
+
+
+                <div id="widget-kaya_player" widget="kaya_player"></div>
+
+
+    </div>
+</div>
+
+
+        <!-- User Header -->
+        <div id="user_header">
+    <!-- Avatar -->
+    <img class="current-user-avatar" src="https://www.gravatar.com/avatar/cab98968d5c09027621118590dfd6a06?default=mm&rating=pg&size=24" data-user="Smar" />
+    <!-- Nickname -->
+    <span class="item linked nickname" data-user="Smar">Smar</span>
+    <span class="separator">|</span>
+    <!-- Rank -->
+    <div class="button" id="rank_button">
+        <span class="item linked rank">8k</span>
+        <div id="rank_progress" class="popup-dialog item-menu">
+            <div class="shiv"></div>
+            <div class="head">
+                Rank progress
+            </div>
+            <div class="info loading">Loading...</div>
+            <div class="info error">We couldn't fetch your rank info. Try again!</div>
+            <div class="info progressbar">
+                <div class="rank-labels">
+                    <div class="left rank-from"></div>
+                    <div class="right rank-to"></div>
+                </div>
+                <div class="rank-progressbar"></div>
+                <br />
+                <div>
+                    voittoja luokituskorotukseen: <span class="wins-rankup"></span> (arvioitu)
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="separator">|</span>
+    <!-- Karma -->
+    <span class="item karma">58 karma</span>
+    <span class="separator">|</span>
+    <!-- Correspondence Go Inbox -->
+    <div class="button bg-hover" id="correspondence_button">
+        <span class="item entypo" title="Correspondence games">%</span>
+        <div id="correspondence_inbox" class="popup-dialog item-menu">
+            <div class="shiv"></div>
+            <div class="head">
+                Correspondence games
+            </div>
+            <div class="info loading">Loading...</div>
+            <div class="info error">We couldn't fetch your games. Try again!</div>
+            <div class="scrollable no-margin">
+                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport"><div class="overview">
+                    <ul>
+                        <li class="template" style="display: none">
+                            <img src="" />
+                            <p class="top correspondence-nickname">
+                            </p>
+                            <p class="middle correspondence-data">
+                            </p>
+                            <p class="bottom correspondence-time">
+                            </p>
+                            <div class="button-panel">
+                                <a href="javascript: void(0);" class="confirm"><span>W</span></a>
+                                <a href="javascript: void(0);" class="reject red"><span>X</span></a>
+                            </div>
+                            <div class="loading-panel"><img src="/img/loading-round.gif" /></div>
+                        </li>
+                    </ul>
+                </div></div>
+            </div>
+            <div class="foot">
+                <a href="javascript: void(0);" id="correspondence-playing-games">Browse all games</a>
+            </div>
+        </div>
+    </div>
+    <!-- Message Inbox -->
+    <div class="button bg-hover" id="inbox_button">
+        <span class="item entypo" title="Private messages">:</span>
+        <div id="message_inbox" class="popup-dialog item-menu">
+            <div class="shiv"></div>
+            <div class="head">
+                Messages
+            </div>
+            <div class="info loading">Loading...</div>
+            <div class="info no-conversations">No messages yet!</div>
+            <div class="info error">We couldn't fetch your messages. Try again!</div>
+            <div class="scrollable no-margin">
+                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport"><div class="overview">
+                    <ul>
+                        <li class="template" style="display: none">
+                            <img src="" />
+                            <p class="top message-nickname">
+                            </p>
+                            <p class="middle message">
+                            </p>
+                            <p class="bottom message-date">
+                            </p>
+                        </li>
+                    </ul>
+                </div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Candy -->
+    <div class="button bg-hover">
+        <a href="http://kaya.gs/kayags/candy.php" target="_blank"><span class="item entypo pink" title="Candy <3">6</span></a>
+    </div>
+    <!-- Logout -->
+    <div class="button bg-hover">
+        <a href="/logout"><span class="item entypo red" title="Sign Out">*</span></a>
+    </div>
+</div>
+
+<div id="correspondence-dialog" class="item-menu" style="display: none;">
+    <div class="head">
+        <span class="title">Messages</span>
+        <a href="javascript: void(0);"><span>X</span></a>
+    </div>
+    <div class="info loading">Loading...</div>
+    <div class="info error">We couldn't fetch your games. Try again!</div>
+    <div class="scrollable no-margin">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport"><div class="overview">
+            <ul>
+                <li class="template" style="display: none">
+                    <img src="" />
+                    <p class="top correspondence-nickname">
+                    </p>
+                    <p class="middle correspondence-data">
+                    </p>
+                    <p class="bottom correspondence-time">
+                    </p>
+                    <div class="button-panel">
+                        <a href="javascript: void(0);" class="confirm"><span>W</span></a>
+                        <a href="javascript: void(0);" class="reject red"><span>X</span></a>
+                        <a href="javascript: void(0);" class="play-button">Play »</a>
+                    </div>
+                    <div class="loading-panel"><img src="/img/loading-round.gif" /></div>
+                </li>
+            </ul>
+        </div></div>
+        <div class="loading-full"><img src="/img/loading-round.gif" /></div>
+    </div>
+    <div class="foot">
+        <a href="javascript: void(0);" id="correspondence-new-game">Start new game</a>
+    </div>
+</div>
+
+        <script src='/js/user_header_1356127183.js'></script>
+
+    </body>
+</html>

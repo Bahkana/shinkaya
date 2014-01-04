@@ -1,0 +1,3367 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,vietnamese,greek,cyrillic,latin-ext,cyrillic-ext,greek-ext);
+
+/* line 7, ../../sass/_reset.scss */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 17, ../../sass/_reset.scss */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 20, ../../sass/_reset.scss */
+
+ol, ul {
+  list-style: none;
+}
+
+/* line 23, ../../sass/_reset.scss */
+
+blockquote, q {
+  quotes: none;
+}
+
+/* line 26, ../../sass/_reset.scss */
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+/* line 30, ../../sass/_reset.scss */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 34, ../../sass/_reset.scss */
+
+body {
+  line-height: 1;
+}
+
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url("/fonts/entypo-webfont.eot");
+  src: url("/fonts/entypo-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/entypo-webfont.woff") format("woff"), url("/fonts/entypo-webfont.ttf") format("truetype"), url("/fonts/entypo-webfont.svg#EntypoRegular") format("svg");
+}
+
+
+@font-face {
+  font-family: 'AierbazziRegular';
+  src: url("/fonts/aierbazzi-webfont.eot");
+  src: url("/fonts/aierbazzi-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/aierbazzi-webfont.woff") format("woff"), url("/fonts/aierbazzi-webfont.ttf") format("truetype"), url("/fonts/aierbazzi-webfont.svg#AierbazziRegular") format("svg");
+}
+
+
+@font-face {
+  font-family: 'EfonRegular';
+  src: url("/fonts/EFON-webfont.eot");
+  src: url("/fonts/EFON-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/EFON-webfont.woff") format("woff"), url("/fonts/EFON-webfont.ttf") format("truetype"), url("/fonts/EFON-webfont.svg#EfonRegular") format("svg");
+}
+
+
+/* line 34, ../../sass/_fonts.scss */
+
+.font-bold {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+  font-weight: 600;
+}
+
+#footer span {
+  .disconnected, .reconnecting {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+#chat {
+  #chat-rooms ul {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+    font-weight: 600;
+  }
+  .chat-content li p {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+    font-weight: 600;
+    &.bold {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+      font-weight: 600;
+    }
+  }
+}
+
+#game-list #game-list-content #game-list-create-game > .buttons .big-button {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+  font-weight: 600;
+}
+
+#game-info {
+  div.game-info-challenge-conditions, table th {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+#game-list #game-list-content li {
+  .players {
+    .black, .white {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+      font-weight: 600;
+    }
+  }
+  .purpose-bar, .status-bar, a.broadcaster {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* line 38, ../../sass/_fonts.scss */
+
+.ie8 {
+  .font-bold, #footer span .disconnected {
+    font-weight: bold;
+  }
+}
+
+#footer span .ie8 .disconnected, .ie8 #footer span .reconnecting, #footer span .ie8 .reconnecting, .ie8 #chat #chat-rooms ul, #chat #chat-rooms .ie8 ul, .ie8 #chat .chat-content li p, #chat .chat-content li .ie8 p, .ie8 #chat .chat-content li p.bold, #chat .chat-content li .ie8 p.bold, .ie8 #game-list #game-list-content #game-list-create-game > .buttons .big-button, #game-list #game-list-content #game-list-create-game > .buttons .ie8 .big-button, .ie8 #game-info div.game-info-challenge-conditions, #game-info .ie8 div.game-info-challenge-conditions, .ie8 #game-info table th, #game-info table .ie8 th, .ie8 #game-list #game-list-content li .players .black, #game-list #game-list-content li .players .ie8 .black, .ie8 #game-list #game-list-content li .players .white, #game-list #game-list-content li .players .ie8 .white, .ie8 #game-list #game-list-content li .purpose-bar, #game-list #game-list-content li .ie8 .purpose-bar, .ie8 #game-list #game-list-content li .status-bar, #game-list #game-list-content li .ie8 .status-bar, .ie8 #game-list #game-list-content li a.broadcaster, #game-list #game-list-content li .ie8 a.broadcaster {
+  font-weight: bold;
+}
+
+/* line 5, ../../sass/main.scss */
+
+html {
+  height: 100%;
+}
+
+/* line 9, ../../sass/main.scss */
+
+body {
+  background: #acbc96 url(/img/background.jpg) fixed;
+  font-size: 13px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Helmet", "Freesans", sans-serif;
+  color: #444444;
+  height: 100%;
+}
+
+/* line 17, ../../sass/main.scss */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &[id*="button"]:hover, &:link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+/* line 24, ../../sass/main.scss */
+
+.link, .user-name:hover > span, #user-list #user-list-content li .name:hover > span, #chat .chat-content li h4:hover > span {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#game-list #game-list-content {
+  li {
+    .players {
+      a {
+        &.black:hover > span, &.white:hover > span {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+      div {
+        &.black:hover > span, &.white:hover > span {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    a.broadcaster:hover > span {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  #game-list-create-game > .buttons a.simple-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  li {
+    &.broadcast-game a.player-icon:hover ~ a.broadcaster span {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    a.player-icon {
+      &.black:hover ~ .players .black span, &.white:hover ~ .players .white span {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* line 29, ../../sass/main.scss */
+
+.not-link, .not-user-name:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+#game-list #game-list-content li {
+  &.broadcast .players {
+    .black:hover, .white:hover {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+  .players div {
+    &.black:hover, &.white:hover {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+}
+
+.not-user-name:hover > span {
+  cursor: default;
+  text-decoration: none;
+}
+
+#game-list #game-list-content li {
+  &.broadcast .players {
+    .black:hover > span, .white:hover > span {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+  .players div {
+    &.black:hover > span, &.white:hover > span {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+  &.broadcast .player-icon {
+    cursor: default;
+    text-decoration: none;
+    &:hover ~ .players {
+      .black, .white {
+        cursor: default;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* line 3, ../../sass/_scrollbar.scss */
+
+.scrollbar-container, #user-list #user-list-content, #chat .chat-content, #game-list #game-list-content {
+  overflow: hidden;
+}
+
+/* line 6, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .scrollbar, #user-list #user-list-content .scrollbar, #chat .chat-content .scrollbar, #game-list #game-list-content .scrollbar {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 0;
+  width: 20px;
+}
+
+/* line 13, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .scrollbar.disable, #user-list #user-list-content .scrollbar.disable, #chat .chat-content .scrollbar.disable, #game-list #game-list-content .scrollbar.disable {
+  display: none;
+}
+
+/* line 15, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .scrollbar .track, #user-list #user-list-content .scrollbar .track, #chat .chat-content .scrollbar .track, #game-list #game-list-content .scrollbar .track {
+  position: relative;
+  width: 20px;
+}
+
+/* line 18, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .scrollbar .track .thumb, #user-list #user-list-content .scrollbar .track .thumb, #chat .chat-content .scrollbar .track .thumb, #game-list #game-list-content .scrollbar .track .thumb {
+  position: absolute;
+  width: 20px;
+  cursor: pointer;
+}
+
+/* line 22, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .scrollbar .track .thumb > div, #user-list #user-list-content .scrollbar .track .thumb > div, #chat .chat-content .scrollbar .track .thumb > div, #game-list #game-list-content .scrollbar .track .thumb > div {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 6px;
+  width: 4px;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #c8c8c8;
+}
+
+/* line 38, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .scrollbar .track:active .thumb > div, #user-list #user-list-content .scrollbar .track:active .thumb > div, #chat .chat-content .scrollbar .track:active .thumb > div, #game-list #game-list-content .scrollbar .track:active .thumb > div, .scrollbar-container .scrollbar .track:focus .thumb > div, #user-list #user-list-content .scrollbar .track:focus .thumb > div, #chat .chat-content .scrollbar .track:focus .thumb > div, #game-list #game-list-content .scrollbar .track:focus .thumb > div, .scrollbar-container .scrollbar .track:hover .thumb > div, #user-list #user-list-content .scrollbar .track:hover .thumb > div, #chat .chat-content .scrollbar .track:hover .thumb > div, #game-list #game-list-content .scrollbar .track:hover .thumb > div {
+  background: #aaaaaa;
+}
+
+/* line 44, ../../sass/_scrollbar.scss */
+
+.scrollbar-container {
+  &.inset-shadow .viewport, &.inset-shadow-shiv .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+}
+
+#user-list {
+  .inset-shadow-shiv#user-list-content .viewport, #chat .chat-content #user-list-content.chat-content-shadow .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+}
+
+#chat .chat-content #user-list #user-list-content.chat-content-shadow .viewport {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  right: 1px;
+  left: 1px;
+  height: auto;
+  margin: 0px;
+}
+
+#user-list #user-list-content {
+  .scrollbar-container#user-list-content-shadow .viewport, #chat #user-list-content-shadow.chat-content .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+}
+
+#chat {
+  #user-list #user-list-content #user-list-content-shadow.chat-content .viewport, .inset-shadow-shiv.chat-content .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+  .chat-content {
+    .chat-content.chat-content-shadow .viewport, .scrollbar-container.chat-content-shadow .viewport, #game-list .chat-content-shadow#game-list-content .viewport {
+      position: absolute;
+      top: 1px;
+      bottom: 1px;
+      right: 1px;
+      left: 1px;
+      height: auto;
+      margin: 0px;
+    }
+  }
+}
+
+#game-list {
+  #chat .chat-content .chat-content-shadow#game-list-content .viewport, .inset-shadow-shiv#game-list-content .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+}
+
+#user-list {
+  .inset-shadow#user-list-content .viewport, #chat .chat-entry #user-list-content.chat-entry-input .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+}
+
+#chat {
+  .chat-entry #user-list #user-list-content.chat-entry-input .viewport, .inset-shadow.chat-content .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+  .chat-entry {
+    .chat-content.chat-entry-input .viewport, .scrollbar-container.chat-entry-input .viewport, #game-list .chat-entry-input#game-list-content .viewport {
+      position: absolute;
+      top: 1px;
+      bottom: 1px;
+      right: 1px;
+      left: 1px;
+      height: auto;
+      margin: 0px;
+    }
+  }
+}
+
+#game-list {
+  #chat .chat-entry .chat-entry-input#game-list-content .viewport, .inset-shadow#game-list-content .viewport {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: auto;
+    margin: 0px;
+  }
+}
+
+/* line 54, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .viewport, #user-list #user-list-content .viewport, #chat .chat-content .viewport, #game-list #game-list-content .viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+/* line 58, ../../sass/_scrollbar.scss */
+
+.scrollbar-container .viewport .overview, #user-list #user-list-content .viewport .overview, #chat .chat-content .viewport .overview, #game-list #game-list-content .viewport .overview {
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* line 68, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container {
+    &.inset-shadow .viewport, &.inset-shadow-shiv .viewport {
+      margin: 0px;
+    }
+  }
+  #user-list .inset-shadow-shiv#user-list-content .viewport {
+    margin: 0px;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) .inset-shadow-shiv#user-list-content .viewport, .cssscrollbar:not(.ie) #user-list #chat .chat-content #user-list-content.chat-content-shadow .viewport, #user-list #chat .chat-content .cssscrollbar:not(.ie) #user-list-content.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #chat .chat-content #user-list #user-list-content.chat-content-shadow .viewport, #chat .chat-content #user-list .cssscrollbar:not(.ie) #user-list-content.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #user-list #user-list-content .scrollbar-container#user-list-content-shadow .viewport, #user-list #user-list-content .cssscrollbar:not(.ie) .scrollbar-container#user-list-content-shadow .viewport, .cssscrollbar:not(.ie) #user-list #user-list-content #chat #user-list-content-shadow.chat-content .viewport, #user-list #user-list-content #chat .cssscrollbar:not(.ie) #user-list-content-shadow.chat-content .viewport, .cssscrollbar:not(.ie) #chat #user-list #user-list-content #user-list-content-shadow.chat-content .viewport, #chat #user-list #user-list-content .cssscrollbar:not(.ie) #user-list-content-shadow.chat-content .viewport, .cssscrollbar:not(.ie) #chat .inset-shadow-shiv.chat-content .viewport, #chat .cssscrollbar:not(.ie) .inset-shadow-shiv.chat-content .viewport, .cssscrollbar:not(.ie) #chat .chat-content .chat-content.chat-content-shadow .viewport, #chat .chat-content .cssscrollbar:not(.ie) .chat-content.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #chat .chat-content .scrollbar-container.chat-content-shadow .viewport, #chat .chat-content .cssscrollbar:not(.ie) .scrollbar-container.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #chat .chat-content #game-list .chat-content-shadow#game-list-content .viewport, #chat .chat-content #game-list .cssscrollbar:not(.ie) .chat-content-shadow#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list #chat .chat-content .chat-content-shadow#game-list-content .viewport, #game-list #chat .chat-content .cssscrollbar:not(.ie) .chat-content-shadow#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list .inset-shadow-shiv#game-list-content .viewport, #game-list .cssscrollbar:not(.ie) .inset-shadow-shiv#game-list-content .viewport, .cssscrollbar:not(.ie) #user-list .inset-shadow#user-list-content .viewport, #user-list .cssscrollbar:not(.ie) .inset-shadow#user-list-content .viewport, .cssscrollbar:not(.ie) #user-list #chat .chat-entry #user-list-content.chat-entry-input .viewport, #user-list #chat .chat-entry .cssscrollbar:not(.ie) #user-list-content.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .chat-entry #user-list #user-list-content.chat-entry-input .viewport, #chat .chat-entry #user-list .cssscrollbar:not(.ie) #user-list-content.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .inset-shadow.chat-content .viewport, #chat .cssscrollbar:not(.ie) .inset-shadow.chat-content .viewport, .cssscrollbar:not(.ie) #chat .chat-entry .chat-content.chat-entry-input .viewport, #chat .chat-entry .cssscrollbar:not(.ie) .chat-content.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .chat-entry .scrollbar-container.chat-entry-input .viewport, #chat .chat-entry .cssscrollbar:not(.ie) .scrollbar-container.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .chat-entry #game-list .chat-entry-input#game-list-content .viewport, #chat .chat-entry #game-list .cssscrollbar:not(.ie) .chat-entry-input#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list #chat .chat-entry .chat-entry-input#game-list-content .viewport, #game-list #chat .chat-entry .cssscrollbar:not(.ie) .chat-entry-input#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list .inset-shadow#game-list-content .viewport, #game-list .cssscrollbar:not(.ie) .inset-shadow#game-list-content .viewport {
+  margin: 0px;
+}
+
+/* line 72, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container.no-margin .viewport, #user-list .no-margin#user-list-content .viewport {
+    margin: 0px;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) .no-margin#user-list-content .viewport, .cssscrollbar:not(.ie) #chat .no-margin.chat-content .viewport, #chat .cssscrollbar:not(.ie) .no-margin.chat-content .viewport, .cssscrollbar:not(.ie) #game-list .no-margin#game-list-content .viewport, #game-list .cssscrollbar:not(.ie) .no-margin#game-list-content .viewport {
+  margin: 0px;
+}
+
+/* line 76, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport, #user-list #user-list-content .viewport {
+    overflow-y: auto;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport, .cssscrollbar:not(.ie) #chat .chat-content .viewport, #chat .cssscrollbar:not(.ie) .chat-content .viewport, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport {
+  overflow-y: auto;
+}
+
+/* line 80, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport::-webkit-scrollbar, #user-list #user-list-content .viewport::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport::-webkit-scrollbar, .cssscrollbar:not(.ie) #chat .chat-content .viewport::-webkit-scrollbar, #chat .cssscrollbar:not(.ie) .chat-content .viewport::-webkit-scrollbar, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport::-webkit-scrollbar, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* line 84, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport::-webkit-scrollbar-track, #user-list #user-list-content .viewport::-webkit-scrollbar-track {
+    margin: 6px;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport::-webkit-scrollbar-track, .cssscrollbar:not(.ie) #chat .chat-content .viewport::-webkit-scrollbar-track, #chat .cssscrollbar:not(.ie) .chat-content .viewport::-webkit-scrollbar-track, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport::-webkit-scrollbar-track, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport::-webkit-scrollbar-track {
+  margin: 6px;
+}
+
+/* line 89, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport::-webkit-scrollbar-thumb, #user-list #user-list-content .viewport::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    margin: 5px;
+    min-height: 20px;
+    background: #c8c8c8;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport::-webkit-scrollbar-thumb, .cssscrollbar:not(.ie) #chat .chat-content .viewport::-webkit-scrollbar-thumb, #chat .cssscrollbar:not(.ie) .chat-content .viewport::-webkit-scrollbar-thumb, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport::-webkit-scrollbar-thumb, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+  margin: 5px;
+  min-height: 20px;
+  background: #c8c8c8;
+}
+
+/* line 98, ../../sass/_scrollbar.scss */
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport::-webkit-scrollbar-thumb:active, #user-list #user-list-content .viewport::-webkit-scrollbar-thumb:active {
+    background: #aaaaaa;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport::-webkit-scrollbar-thumb:active, .cssscrollbar:not(.ie) #chat .chat-content .viewport::-webkit-scrollbar-thumb:active, #chat .cssscrollbar:not(.ie) .chat-content .viewport::-webkit-scrollbar-thumb:active, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport::-webkit-scrollbar-thumb:active, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport::-webkit-scrollbar-thumb:active {
+  background: #aaaaaa;
+}
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport::-webkit-scrollbar-thumb:focus, #user-list #user-list-content .viewport::-webkit-scrollbar-thumb:focus {
+    background: #aaaaaa;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport::-webkit-scrollbar-thumb:focus, .cssscrollbar:not(.ie) #chat .chat-content .viewport::-webkit-scrollbar-thumb:focus, #chat .cssscrollbar:not(.ie) .chat-content .viewport::-webkit-scrollbar-thumb:focus, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport::-webkit-scrollbar-thumb:focus, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport::-webkit-scrollbar-thumb:focus {
+  background: #aaaaaa;
+}
+
+.cssscrollbar:not(.ie) {
+  .scrollbar-container .viewport::-webkit-scrollbar-thumb:hover, #user-list #user-list-content .viewport::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+  }
+}
+
+#user-list .cssscrollbar:not(.ie) #user-list-content .viewport::-webkit-scrollbar-thumb:hover, .cssscrollbar:not(.ie) #chat .chat-content .viewport::-webkit-scrollbar-thumb:hover, #chat .cssscrollbar:not(.ie) .chat-content .viewport::-webkit-scrollbar-thumb:hover, .cssscrollbar:not(.ie) #game-list #game-list-content .viewport::-webkit-scrollbar-thumb:hover, #game-list .cssscrollbar:not(.ie) #game-list-content .viewport::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+/* line 3, ../../sass/_basic-button.scss */
+
+.basic-button, .basic-button-off-white {
+  display: inline-block;
+  padding: 5px 15px;
+  /*line-height: 20px;*/
+  border-top: 1px solid #bababa;
+  border-bottom: 1px solid white;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#game-list {
+  #game-list-controls a, #game-list-content div.game-entry-buttons a.play-game {
+    display: inline-block;
+    padding: 5px 15px;
+    /*line-height: 20px;*/
+    border-top: 1px solid #bababa;
+    border-bottom: 1px solid white;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* line 13, ../../sass/_basic-button.scss */
+
+.basic-button:hover, .basic-button-off-white:hover {
+  text-decoration: none;
+  color: #111111;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+}
+
+#game-list {
+  #game-list-controls a:hover, #game-list-content div.game-entry-buttons a.play-game:hover {
+    text-decoration: none;
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+  }
+}
+
+.basic-button:active, .basic-button-off-white:active {
+  text-decoration: none;
+  color: #111111;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+}
+
+#game-list {
+  #game-list-controls a:active, #game-list-content div.game-entry-buttons a.play-game:active {
+    text-decoration: none;
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+  }
+}
+
+.basic-button.active, .active.basic-button-off-white {
+  text-decoration: none;
+  color: #111111;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+}
+
+#game-list {
+  #game-list-controls a.active, #game-list-content div.game-entry-buttons a.active.play-game {
+    text-decoration: none;
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+  }
+}
+
+.basic-button.selected, .selected.basic-button-off-white {
+  text-decoration: none;
+  color: #111111;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+}
+
+#game-list {
+  #game-list-controls a.selected, #game-list-content div.game-entry-buttons a.selected.play-game {
+    text-decoration: none;
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1);
+  }
+}
+
+/* line 20, ../../sass/_basic-button.scss */
+
+.ie {
+  .basic-button, .basic-button-off-white, #game-list #game-list-controls a {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+}
+
+#game-list #game-list-controls .ie a, .ie #game-list #game-list-content div.game-entry-buttons a.play-game, #game-list #game-list-content div.game-entry-buttons .ie a.play-game {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+/* line 23, ../../sass/_basic-button.scss */
+
+.ie {
+  .basic-button:hover, .basic-button-off-white:hover, #game-list #game-list-controls a:hover {
+    background-color: #fafafa;
+  }
+}
+
+#game-list #game-list-controls .ie a:hover, .ie #game-list #game-list-content div.game-entry-buttons a.play-game:hover, #game-list #game-list-content div.game-entry-buttons .ie a.play-game:hover {
+  background-color: #fafafa;
+}
+
+.ie {
+  .basic-button:active, .basic-button-off-white:active, #game-list #game-list-controls a:active {
+    background-color: #fafafa;
+  }
+}
+
+#game-list #game-list-controls .ie a:active, .ie #game-list #game-list-content div.game-entry-buttons a.play-game:active, #game-list #game-list-content div.game-entry-buttons .ie a.play-game:active {
+  background-color: #fafafa;
+}
+
+.ie {
+  .basic-button.active, .active.basic-button-off-white, #game-list #game-list-controls a.active {
+    background-color: #fafafa;
+  }
+}
+
+#game-list #game-list-controls .ie a.active, .ie #game-list #game-list-content div.game-entry-buttons a.active.play-game, #game-list #game-list-content div.game-entry-buttons .ie a.active.play-game {
+  background-color: #fafafa;
+}
+
+.ie {
+  .basic-button.selected, .selected.basic-button-off-white, #game-list #game-list-controls a.selected {
+    background-color: #fafafa;
+  }
+}
+
+#game-list #game-list-controls .ie a.selected, .ie #game-list #game-list-content div.game-entry-buttons a.selected.play-game, #game-list #game-list-content div.game-entry-buttons .ie a.selected.play-game {
+  background-color: #fafafa;
+}
+
+/*
+    .basic-button-off-white {
+        @extend .basic-button;
+        background-color: $basic-button-off-white-background;
+        &:hover, &:active, &.active, &.selected {
+            background-color: $basic-button-off-white-hover-background;
+            color: $text-white;
+        }
+    }
+*/
+/* line 43, ../../sass/_basic-button.scss */
+
+.basic-button-off-white:hover {
+  background-color: rgba(91, 122, 47, 0.8) !important;
+  color: white;
+}
+
+#game-list {
+  #game-list-controls a:hover, #game-list-content div.game-entry-buttons a.play-game:hover {
+    background-color: rgba(91, 122, 47, 0.8) !important;
+    color: white;
+  }
+}
+
+.basic-button-off-white:active {
+  background-color: rgba(91, 122, 47, 0.8) !important;
+  color: white;
+}
+
+#game-list {
+  #game-list-controls a:active, #game-list-content div.game-entry-buttons a.play-game:active {
+    background-color: rgba(91, 122, 47, 0.8) !important;
+    color: white;
+  }
+}
+
+.basic-button-off-white.active {
+  background-color: rgba(91, 122, 47, 0.8) !important;
+  color: white;
+}
+
+#game-list {
+  #game-list-controls a.active, #game-list-content div.game-entry-buttons a.active.play-game {
+    background-color: rgba(91, 122, 47, 0.8) !important;
+    color: white;
+  }
+}
+
+.basic-button-off-white.selected {
+  background-color: rgba(91, 122, 47, 0.8) !important;
+  color: white;
+}
+
+#game-list {
+  #game-list-controls a.selected, #game-list-content div.game-entry-buttons a.selected.play-game {
+    background-color: rgba(91, 122, 47, 0.8) !important;
+    color: white;
+  }
+}
+
+/* line 49, ../../sass/_basic-button.scss */
+
+.ie8 {
+  .basic-button-off-white:hover, #game-list #game-list-controls a:hover {
+    background-color: #799256 !important;
+  }
+}
+
+#game-list #game-list-controls .ie8 a:hover, .ie8 #game-list #game-list-content div.game-entry-buttons a.play-game:hover, #game-list #game-list-content div.game-entry-buttons .ie8 a.play-game:hover {
+  background-color: #799256 !important;
+}
+
+.ie8 {
+  .basic-button-off-white:active, #game-list #game-list-controls a:active {
+    background-color: #799256 !important;
+  }
+}
+
+#game-list #game-list-controls .ie8 a:active, .ie8 #game-list #game-list-content div.game-entry-buttons a.play-game:active, #game-list #game-list-content div.game-entry-buttons .ie8 a.play-game:active {
+  background-color: #799256 !important;
+}
+
+.ie8 {
+  .basic-button-off-white.active, #game-list #game-list-controls a.active {
+    background-color: #799256 !important;
+  }
+}
+
+#game-list #game-list-controls .ie8 a.active, .ie8 #game-list #game-list-content div.game-entry-buttons a.active.play-game, #game-list #game-list-content div.game-entry-buttons .ie8 a.active.play-game {
+  background-color: #799256 !important;
+}
+
+.ie8 {
+  .basic-button-off-white.selected, #game-list #game-list-controls a.selected {
+    background-color: #799256 !important;
+  }
+}
+
+#game-list #game-list-controls .ie8 a.selected, .ie8 #game-list #game-list-content div.game-entry-buttons a.selected.play-game, #game-list #game-list-content div.game-entry-buttons .ie8 a.selected.play-game {
+  background-color: #799256 !important;
+}
+
+/*
+    .ie & {
+        &:hover, &:active, &.active, &.selected {
+            background: $icon-light-green;
+        }
+    }
+*/
+/* line 64, ../../sass/_basic-button.scss */
+
+.button-note, #chat .chat-entry .user-list-toggle-button .friends, #game-list #game-list-controls a > span {
+  float: right;
+  padding: 1px 4px 2px;
+  margin: 1px 0 0 4px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  line-height: 12px;
+  font-weight: normal;
+}
+
+/* line 3, ../../sass/_inset-shadow.scss */
+
+.inset-shadow, .inset-shadow-shiv, #user-list #user-list-content #user-list-content-shadow {
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+#chat {
+  .chat-content .chat-content-shadow, .chat-entry .chat-entry-input {
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-bottom: 1px solid white;
+  }
+}
+
+/* line 8, ../../sass/_inset-shadow.scss */
+
+.ie8 {
+  .inset-shadow, .inset-shadow-shiv, #user-list #user-list-content #user-list-content-shadow {
+    border: 1px solid #ccc;
+    border-bottom-color: #ccc;
+  }
+}
+
+#user-list #user-list-content .ie8 #user-list-content-shadow, .ie8 #chat .chat-content .chat-content-shadow, #chat .chat-content .ie8 .chat-content-shadow, .ie8 #chat .chat-entry .chat-entry-input, #chat .chat-entry .ie8 .chat-entry-input {
+  border: 1px solid #ccc;
+  border-bottom-color: #ccc;
+}
+
+/* line 13, ../../sass/_inset-shadow.scss */
+
+.inset-shadow-shiv, #user-list #user-list-content #user-list-content-shadow, #chat .chat-content .chat-content-shadow {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointeEfonRegularr-events: none;
+}
+
+/* line 25, ../../sass/_inset-shadow.scss */
+
+.ie8 {
+  .inset-shadow-shiv, #user-list #user-list-content #user-list-content-shadow {
+    display: none;
+  }
+}
+
+#user-list #user-list-content .ie8 #user-list-content-shadow, .ie8 #chat .chat-content .chat-content-shadow, #chat .chat-content .ie8 .chat-content-shadow {
+  display: none;
+}
+
+.ie9 {
+  .inset-shadow-shiv, #user-list #user-list-content #user-list-content-shadow {
+    display: none;
+  }
+}
+
+#user-list #user-list-content .ie9 #user-list-content-shadow, .ie9 #chat .chat-content .chat-content-shadow, #chat .chat-content .ie9 .chat-content-shadow {
+  display: none;
+}
+
+/* line 1, ../../sass/_footer.scss */
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding-top: 20px;
+  text-align: center;
+  color: #a5c579;
+  font-size: 16px;
+  -moz-transition: text-indent 1s 0.2s;
+  -webkit-transition: text-indent 1s 0.2s;
+  -o-transition: text-indent 1s 0.2s;
+  transition: text-indent 1s 0.2s;
+  > * {
+    margin: 0 10px;
+  }
+}
+
+/* line 12, ../../sass/_footer.scss */
+
+@media screen and (max-height: 480px) {
+  /* line 1, ../../sass/_footer.scss */
+  #footer {
+    position: static;
+  }
+}
+
+/* line 25, ../../sass/_footer.scss */
+
+.user-list-slid-open #footer {
+  text-indent: 300px;
+}
+
+/* line 31, ../../sass/_footer.scss */
+
+#footer span {
+  .disconnected, .reconnecting {
+    border-radius: 5px;
+    padding: 3px 6px;
+  }
+  .disconnected {
+    color: white;
+    background-color: #941c1e;
+  }
+  .reconnecting {
+    color: white;
+    background-color: #c06000;
+  }
+}
+
+/* line 37, ../../sass/_footer.scss */
+
+/* line 42, ../../sass/_footer.scss */
+
+/* --- Widget Bar --- */
+/* line 2, ../../sass/_widgets.scss */
+
+#kaya-widget-bar {
+  height: 300px;
+  width: 240px;
+  padding: 5px;
+  background-color: #AAA;
+  /*#ACA;*/
+  position: fixed;
+  top: 150px;
+  right: 0px;
+  border-style: solid none solid solid;
+  border-width: 1px 0px 1px 1px;
+  line-height: normal;
+  font-size: 12px;
+  z-index: 5;
+}
+
+/* line 20, ../../sass/_widgets.scss */
+
+.bottomleftradius {
+  -webkit-border-radius: 0px 0px 0px 5px;
+  -moz-border-radius: 0px 0px 0px 5px;
+  border-radius: 0px 0px 0px 5px;
+}
+
+/* line 26, ../../sass/_widgets.scss */
+
+#kaya-widget-tab {
+  height: 91px;
+  width: 30px;
+  background-color: #AAA;
+  /*#ACA;*/
+  position: fixed;
+  right: 250px;
+  top: 150px;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  span.vertical {
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: relative;
+    top: 14px;
+  }
+}
+
+/* line 43, ../../sass/_widgets.scss */
+
+/* line 54, ../../sass/_widgets.scss */
+
+#widget-container {
+  width: 226px;
+  height: 285px;
+  background-color: #DDD;
+  padding: 6px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #000;
+  -moz-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5) inset;
+  -ms-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* this should not be here, but in the countdown widget style sheet */
+/* line 72, ../../sass/_widgets.scss */
+
+#widget-countdown {
+  text-align: center;
+  padding: 5px;
+  font-family: monospace;
+  background-color: #AAA;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #000;
+  -moz-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+  span {
+    &.countdown-number {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    &.countdown-sep {
+      color: #800;
+    }
+  }
+}
+
+/* line 88, ../../sass/_widgets.scss */
+
+/* line 93, ../../sass/_widgets.scss */
+
+/* line 41, ../../sass/main.scss */
+
+#content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 47px;
+  bottom: 20px;
+  > div {
+    position: relative;
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    /* cover the header's shallow area */
+    margin-top: -15px;
+    padding-top: 15px;
+    -webkit-transition: width 1s 0.2s;
+    -moz-transition: width 1s 0.2s;
+    -o-transition: width 1s 0.2s;
+    transition: width 1s 0.2s;
+    /*
+        .user-list-slid-open & {
+            width: 1260px;
+        }
+    */
+  }
+}
+
+@media screen and (max-height: 480px) {
+  /* line 41, ../../sass/main.scss */
+  #content {
+    position: static;
+    margin-top: 47px;
+  }
+}
+
+/* line 54, ../../sass/main.scss */
+
+@media screen and (max-height: 480px) {
+  /* line 54, ../../sass/main.scss */
+  #content > div {
+    min-height: 413px;
+  }
+}
+
+/* line 78, ../../sass/main.scss */
+
+.ie8 #content > div {
+  border: 1px solid #aaa;
+}
+
+/* line 83, ../../sass/main.scss */
+
+.ui-widget.ui-dialog {
+  font-size: 12px !important;
+  vertical-align: normal;
+}
+
+/* line 89, ../../sass/main.scss */
+
+#senseis_dialog {
+  line-height: normal;
+  p.senseis_terms {
+    color: #800;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+/* line 91, ../../sass/main.scss */
+
+/* line 100, ../../sass/main.scss */
+
+#disconnected-help-dialog > {
+  ol {
+    list-style-type: decimal;
+    margin: 12px 0px;
+    padding: 0 0 0 40px;
+    > li > a {
+      outline: none;
+      color: #24566f;
+    }
+  }
+  div {
+    border-top: 1px solid #a9a9a9;
+    padding-top: 8px;
+    height: 14px;
+    > span {
+      &.waiting {
+        color: #c06000;
+      }
+      &.failed {
+        color: #941c1e;
+      }
+    }
+  }
+}
+
+/* line 104, ../../sass/main.scss */
+
+/* line 110, ../../sass/main.scss */
+
+/* line 115, ../../sass/main.scss */
+
+/* line 118, ../../sass/main.scss */
+
+/* line 126, ../../sass/main.scss */
+
+hr.main-hr {
+  clear: both;
+  border-style: dashed none none none;
+  border-color: #444444;
+  border-width: 1px;
+  margin: 10px;
+}
+
+/* line 6, ../../sass/_content-shadow.scss */
+
+#content > div #content-shadow {
+  display: block;
+  position: absolute;
+  width: 980px;
+  height: 6px;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition: width 1s 0.2s;
+  -moz-transition: width 1s 0.2s;
+  -o-transition: width 1s 0.2s;
+  transition: width 1s 0.2s;
+  &:before, &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 326.66667px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    -moz-transform: skew(3deg) rotate(3deg);
+    -ms-transform: skew(3deg) rotate(3deg);
+    -o-transform: skew(3deg) rotate(3deg);
+    -webkit-transform: skew(3deg) rotate(3deg);
+    transform: skew(3deg) rotate(3deg);
+  }
+  &:before {
+    left: 0px;
+    margin-right: -3px;
+    -moz-transform: skew(-3deg) rotate(-3deg);
+    -ms-transform: skew(-3deg) rotate(-3deg);
+    -o-transform: skew(-3deg) rotate(-3deg);
+    -webkit-transform: skew(-3deg) rotate(-3deg);
+    transform: skew(-3deg) rotate(-3deg);
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 326.66667px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    -moz-transform: skew(3deg) rotate(3deg);
+    -ms-transform: skew(3deg) rotate(3deg);
+    -o-transform: skew(3deg) rotate(3deg);
+    -webkit-transform: skew(3deg) rotate(3deg);
+    transform: skew(3deg) rotate(3deg);
+  }
+  display: block;
+  position: absolute;
+  width: 980px;
+  height: 6px;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition: width 1s 0.2s;
+  -moz-transition: width 1s 0.2s;
+  -o-transition: width 1s 0.2s;
+  transition: width 1s 0.2s;
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 326.66667px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    -moz-transform: skew(3deg) rotate(3deg);
+    -ms-transform: skew(3deg) rotate(3deg);
+    -o-transform: skew(3deg) rotate(3deg);
+    -webkit-transform: skew(3deg) rotate(3deg);
+    transform: skew(3deg) rotate(3deg);
+  }
+  &:before {
+    left: 0px;
+    margin-right: -3px;
+    -moz-transform: skew(-3deg) rotate(-3deg);
+    -ms-transform: skew(-3deg) rotate(-3deg);
+    -o-transform: skew(-3deg) rotate(-3deg);
+    -webkit-transform: skew(-3deg) rotate(-3deg);
+    transform: skew(-3deg) rotate(-3deg);
+  }
+}
+
+/* line 21, ../../sass/_content-shadow.scss */
+
+/* line 39, ../../sass/_content-shadow.scss */
+
+/* line 6, ../../sass/_content-shadow.scss */
+
+/* line 21, ../../sass/_content-shadow.scss */
+
+/* line 39, ../../sass/_content-shadow.scss */
+
+/* line 3, ../../sass/_fixed-size.scss */
+
+.fixed-size, .user-name > span, #user-list #user-list-content li .name > span, #chat .chat-content li h4 > span {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+#game-list #game-list-content li {
+  .players {
+    a {
+      &.black > span, &.white > span {
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        vertical-align: bottom;
+      }
+    }
+    div {
+      &.black > span, &.white > span {
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        vertical-align: bottom;
+      }
+    }
+  }
+  a.broadcaster > span, &.compact span, &.compact-header span {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+  }
+}
+
+/* line 12, ../../sass/_user-name.scss */
+
+.user-name:hover, #user-list #user-list-content li .name:hover, #chat .chat-content li h4:hover {
+  cursor: pointer;
+}
+
+#game-list #game-list-content li {
+  .players {
+    a {
+      &.black:hover, &.white:hover {
+        cursor: pointer;
+      }
+    }
+    div {
+      &.black:hover, &.white:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  a.broadcaster:hover {
+    cursor: pointer;
+  }
+}
+
+/* line 20, ../../sass/_user-name.scss */
+
+.user-name b, #user-list #user-list-content li .name b, #chat .chat-content li h4 b {
+  font-size: 11px;
+  position: relative;
+  top: -3px;
+}
+
+#game-list #game-list-content li {
+  .players {
+    a {
+      &.black b, &.white b {
+        font-size: 11px;
+        position: relative;
+        top: -3px;
+      }
+    }
+    div {
+      &.black b, &.white b {
+        font-size: 11px;
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+  a.broadcaster b {
+    font-size: 11px;
+    position: relative;
+    top: -3px;
+  }
+}
+
+/* line 1, ../../sass/_user-list-open-close.scss */
+
+#user-list {
+  -moz-transition: opacity 0.3s, z-index 0s 0.3s;
+  -webkit-transition: opacity 0.3s, z-index 0s 0.3s;
+  -o-transition: opacity 0.3s, z-index 0s 0.3s;
+  transition: opacity 0.3s, z-index 0s 0.3s;
+  opacity: 0;
+  right: 572px;
+}
+
+/* line 10, ../../sass/_user-list-open-close.scss */
+
+.user-list-slid-open #user-list, .user-list-popped-up #user-list {
+  box-shadow: -1px 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 15, ../../sass/_user-list-open-close.scss */
+
+.user-list-slid-close #user-list {
+  -moz-transition: opacity 0s 1.2s;
+  -webkit-transition: opacity 0s 1.2s;
+  -o-transition: opacity 0s 1.2s;
+  transition: opacity 0s 1.2s;
+  right: auto;
+  bottom: 10px;
+}
+
+/* line 24, ../../sass/_user-list-open-close.scss */
+
+.user-list-slid-open #user-list {
+  left: 0;
+  right: auto;
+  opacity: 1;
+  bottom: 10px;
+  -moz-transition: opacity 0s;
+  -webkit-transition: opacity 0s;
+  -o-transition: opacity 0s;
+  transition: opacity 0s;
+}
+
+/* line 36, ../../sass/_user-list-open-close.scss */
+
+.user-list-popped-up #user-list {
+  -moz-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+  z-index: 10;
+  #user-list-shiv {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    height: 10px;
+    width: 20px;
+    overflow: hidden;
+    &:before {
+      content: ' ';
+      display: block;
+      margin-left: 5px;
+      margin-top: -5px;
+      height: 10px;
+      width: 10px;
+      background: #e9e9e9;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+/* line 43, ../../sass/_user-list-open-close.scss */
+
+/* line 51, ../../sass/_user-list-open-close.scss */
+
+/* line 69, ../../sass/_user-list-open-close.scss */
+
+.ie8 #user-list #user-list-shiv {
+  display: none;
+}
+
+/* line 1, ../../sass/_user-list-panel.scss */
+
+#user-list li .panel {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  right: 15px;
+  height: 40px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s 0.5s, opacity 0.5s 0s;
+  -moz-transition: visibility 0s 0.5s, opacity 0.5s 0s;
+  -o-transition: visibility 0s 0.5s, opacity 0.5s 0s;
+  transition: visibility 0s 0.5s, opacity 0.5s 0s;
+  p {
+    position: absolute;
+    right: 0;
+    left: 105px;
+    top: 3px;
+    height: 42px;
+    overflow: hidden;
+  }
+  a {
+    display: block;
+    float: left;
+    color: #999999;
+    cursor: pointer;
+    margin-right: 6px;
+    overflow: hidden;
+    span {
+      display: none;
+    }
+    &:hover {
+      color: #5a7b2a;
+    }
+    &:before {
+      font-family: "EntypoRegular", sans-serif;
+      font-size: 40px;
+      display: inline-block;
+      margin: -14px 0;
+    }
+    &:first-child + a + a + a {
+      clear: left;
+    }
+    &.message:before {
+      content: '&';
+    }
+    &.profile:before {
+      content: '.';
+    }
+    &.challenge:before {
+      content: ',';
+    }
+    &.friend {
+      &.selected {
+        color: #941c1e;
+      }
+      &:before {
+        content: '6';
+      }
+    }
+    &.karma:before {
+      content: '8';
+    }
+    &.muzzle:before {
+      content: '\00E0';
+    }
+  }
+  img.avatar {
+    position: absolute;
+    right: 0;
+    top: -21px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #dddddd;
+  }
+}
+
+/* line 14, ../../sass/_user-list-panel.scss */
+
+/* line 23, ../../sass/_user-list-panel.scss */
+
+/* line 30, ../../sass/_user-list-panel.scss */
+
+/* line 33, ../../sass/_user-list-panel.scss */
+
+/* line 36, ../../sass/_user-list-panel.scss */
+
+/* line 43, ../../sass/_user-list-panel.scss */
+
+/* line 46, ../../sass/_user-list-panel.scss */
+
+/* line 49, ../../sass/_user-list-panel.scss */
+
+/* line 52, ../../sass/_user-list-panel.scss */
+
+/* line 55, ../../sass/_user-list-panel.scss */
+
+/* line 58, ../../sass/_user-list-panel.scss */
+
+/* line 61, ../../sass/_user-list-panel.scss */
+
+/* line 64, ../../sass/_user-list-panel.scss */
+
+/* line 67, ../../sass/_user-list-panel.scss */
+
+/* line 75, ../../sass/_user-list-panel.scss */
+
+.ie8 #user-list li .panel a {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  background: url(/images/layout/panel-icons-ie8.png);
+  &:before {
+    display: none;
+  }
+  &.message {
+    background-position: 0px 0px;
+  }
+  &.profile {
+    background-position: -25px 0px;
+  }
+  &.friend {
+    background-position: -50px 0px;
+  }
+  &.karma {
+    background-position: 0px -20px;
+  }
+  &.challenge {
+    background-position: -25px -20px;
+  }
+  &.muzzle {
+    background-position: -50px -20px;
+  }
+  &:hover {
+    &.message {
+      background-position: 0px -40px;
+    }
+    &.profile {
+      background-position: -25px -40px;
+    }
+    &.friend {
+      background-position: -50px -40px;
+    }
+    &.karma {
+      background-position: 0px -60px;
+    }
+    &.challenge {
+      background-position: -25px -60px;
+    }
+    &.muzzle {
+      background-position: -50px -60px;
+    }
+  }
+}
+
+/* line 81, ../../sass/_user-list-panel.scss */
+
+/* line 84, ../../sass/_user-list-panel.scss */
+
+/* line 87, ../../sass/_user-list-panel.scss */
+
+/* line 90, ../../sass/_user-list-panel.scss */
+
+/* line 93, ../../sass/_user-list-panel.scss */
+
+/* line 96, ../../sass/_user-list-panel.scss */
+
+/* line 99, ../../sass/_user-list-panel.scss */
+
+/* line 102, ../../sass/_user-list-panel.scss */
+
+/* line 105, ../../sass/_user-list-panel.scss */
+
+/* line 108, ../../sass/_user-list-panel.scss */
+
+/* line 111, ../../sass/_user-list-panel.scss */
+
+/* line 114, ../../sass/_user-list-panel.scss */
+
+/* line 117, ../../sass/_user-list-panel.scss */
+
+/* line 1, ../../sass/_user-list-toolbar.scss */
+
+#user-list-toolbar {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  > a {
+    display: block;
+    float: right;
+    color: #999999;
+    cursor: pointer;
+    margin-left: 6px;
+    overflow: hidden;
+    span {
+      display: none;
+    }
+    &:hover, &.selected {
+      color: #5a7b2a;
+    }
+    &:before {
+      font-family: "EntypoRegular", sans-serif;
+      font-size: 40px;
+      display: inline-block;
+      margin: -14px 0;
+    }
+  }
+  a {
+    &.search:before {
+      content: 'ô';
+    }
+    &.sort:before {
+      content: 'l';
+    }
+  }
+  .toolbar-panel {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    line-height: 24px;
+    background: #e9e9e9;
+    text-align: right;
+  }
+  #user-list-toolbar-sort {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    line-height: 24px;
+    background: #e9e9e9;
+    text-align: right;
+    right: 24px;
+    a {
+      margin-left: 0.3em;
+      cursor: pointer;
+      &:hover, &.selected {
+        color: #5a7b2a;
+      }
+    }
+  }
+  a.sort.selected ~ #user-list-toolbar-sort {
+    display: block;
+  }
+}
+
+/* line 6, ../../sass/_user-list-toolbar.scss */
+
+/* line 13, ../../sass/_user-list-toolbar.scss */
+
+/* line 16, ../../sass/_user-list-toolbar.scss */
+
+/* line 19, ../../sass/_user-list-toolbar.scss */
+
+/* line 26, ../../sass/_user-list-toolbar.scss */
+
+/* line 29, ../../sass/_user-list-toolbar.scss */
+
+/* line 33, ../../sass/_user-list-toolbar.scss */
+
+/* line 43, ../../sass/_user-list-toolbar.scss */
+
+/* line 46, ../../sass/_user-list-toolbar.scss */
+
+/* line 49, ../../sass/_user-list-toolbar.scss */
+
+/* line 54, ../../sass/_user-list-toolbar.scss */
+
+/* Search user */
+/* line 60, ../../sass/_user-list-toolbar.scss */
+
+#search_user {
+  min-height: 0px !important;
+  table.search_form {
+    margin: 0px auto;
+    td, th {
+      padding: 3px;
+    }
+  }
+  input {
+    border: 1px solid #444444;
+    outline: none;
+    background-color: #DDD;
+    padding: 2px;
+  }
+  div {
+    &#search_user_result {
+      display: none;
+      table.search_result {
+        border-collapse: collapse;
+        margin: 20px auto 0px;
+        td {
+          border-collapse: collapse;
+          padding: 0px 10px;
+          vertical-align: top;
+          &.info {
+            border-left: 1px dashed #444444;
+            border-right: 1px dashed #444444;
+            width: 140px;
+            table.info {
+              margin: 0px auto;
+              text-align: center;
+              td {
+                height: 19px;
+                vertical-align: middle;
+              }
+            }
+          }
+          &#search_user_actions img {
+            float: left;
+            clear: both;
+            cursor: pointer;
+            background-color: #EEE;
+            padding: 1px;
+            margin: 1px;
+            border: 1px solid #666;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+          }
+        }
+      }
+      span.AccountKanji {
+        color: #941c1e;
+      }
+      img.avatar {
+        float: left;
+        border: 1px solid #444444;
+      }
+    }
+    &#search_user_error {
+      color: #941c1e;
+      text-align: center;
+      display: none;
+    }
+  }
+}
+
+/* line 63, ../../sass/_user-list-toolbar.scss */
+
+/* line 66, ../../sass/_user-list-toolbar.scss */
+
+/* line 71, ../../sass/_user-list-toolbar.scss */
+
+/* line 78, ../../sass/_user-list-toolbar.scss */
+
+/* line 81, ../../sass/_user-list-toolbar.scss */
+
+/* line 84, ../../sass/_user-list-toolbar.scss */
+
+/* line 89, ../../sass/_user-list-toolbar.scss */
+
+/* line 94, ../../sass/_user-list-toolbar.scss */
+
+/* line 97, ../../sass/_user-list-toolbar.scss */
+
+/* line 104, ../../sass/_user-list-toolbar.scss */
+
+/* line 120, ../../sass/_user-list-toolbar.scss */
+
+/* line 124, ../../sass/_user-list-toolbar.scss */
+
+/* line 130, ../../sass/_user-list-toolbar.scss */
+
+/*
+.ui-dialog {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+*/
+/* line 9, ../../sass/_user-list.scss */
+
+#user-list {
+  position: absolute;
+  top: 30px;
+  bottom: 70px;
+  width: 280px;
+  background: #e9e9e9;
+}
+
+/* line 15, ../../sass/_user-list.scss */
+
+.ie8 #user-list {
+  border: 1px solid #ccc;
+}
+
+/* line 19, ../../sass/_user-list.scss */
+
+#user-list #user-list-content {
+  position: absolute;
+  top: 20px;
+  bottom: 40px;
+  left: 10px;
+  right: 10px;
+  z-index: 1;
+  background: white;
+}
+
+/* line 33, ../../sass/_user-list.scss */
+
+.ie8 #user-list #user-list-content, .ie9 #user-list #user-list-content {
+  border: 1px solid #ccc;
+}
+
+/* line 37, ../../sass/_user-list.scss */
+
+#user-list #user-list-content {
+  h4 {
+    padding: 10px 15px 10px 15px;
+    background: #eff5e5;
+    color: #799058;
+  }
+  li {
+    position: relative;
+    z-index: 0;
+    padding: 10px 15px 10px 15px;
+    height: 20px;
+    -webkit-transition: height 0.5s 0.2s;
+    -moz-transition: height 0.5s 0.2s;
+    -o-transition: height 0.5s 0.2s;
+    transition: height 0.5s 0.2s;
+    &.sleeping {
+      .name {
+        color: #999999;
+      }
+      img.karma {
+        opacity: 0.3;
+      }
+    }
+    &:not(.sleeping) .name {
+      color: #799058;
+    }
+    .name {
+      display: inline-block;
+      line-height: 1.5;
+      z-index: 1;
+      position: relative;
+      > span {
+        max-width: 170px;
+      }
+    }
+    .type {
+      float: right;
+      right: 0px;
+      z-index: 1;
+      position: relative;
+      font-size: 28px;
+      font-family: "宋体", SimSun;
+      margin: -4px 0;
+      color: #999999;
+      -webkit-transition: right 0.5s 0.2s;
+      -moz-transition: right 0.5s 0.2s;
+      -o-transition: right 0.5s 0.2s;
+      transition: right 0.5s 0.2s;
+      opacity: 0.5;
+    }
+    &:not(.sleeping) .type {
+      color: #799058;
+      opacity: 1;
+    }
+    img.karma {
+      float: right;
+      position: relative;
+      top: -4px;
+      right: 4px;
+      width: 28px;
+      height: 28px;
+      border: none;
+      z-index: 1;
+      -webkit-transition: right 0.5s 0.2s, top 0.5s 0.2s;
+      -moz-transition: right 0.5s 0.2s, top 0.5s 0.2s;
+      -o-transition: right 0.5s 0.2s, top 0.5s 0.2s;
+      transition: right 0.5s 0.2s, top 0.5s 0.2s;
+    }
+    > a.karma {
+      display: none;
+      font-family: "AierbazziRegular", sans-serif;
+      pointer-events: none;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      line-height: 40px;
+      font-size: 40px;
+      color: rgba(90, 123, 42, 0.1);
+    }
+  }
+}
+
+/* line 43, ../../sass/_user-list.scss */
+
+/* line 51, ../../sass/_user-list.scss */
+
+/* line 55, ../../sass/_user-list.scss */
+
+/* line 60, ../../sass/_user-list.scss */
+
+/* line 64, ../../sass/_user-list.scss */
+
+/* line 71, ../../sass/_user-list.scss */
+
+/* line 76, ../../sass/_user-list.scss */
+
+/* line 92, ../../sass/_user-list.scss */
+
+/* line 97, ../../sass/_user-list.scss */
+
+/* line 114, ../../sass/_user-list.scss */
+
+/* line 128, ../../sass/_user-list.scss */
+
+.ie8 #user-list #user-list-content li > a.karma {
+  color: #eef1ea;
+}
+
+/* line 135, ../../sass/_user-list.scss */
+
+#user-list #user-list-content li {
+  &.nonfriend {
+    &:nth-child(even), &.even {
+      background: whitesmoke;
+    }
+  }
+  &.friend {
+    background: #f4ffe0;
+    &:nth-child(even), &.even {
+      background: #eff5e5;
+    }
+  }
+  &.selected {
+    height: 60px;
+    .name > span {
+      max-width: 105px;
+    }
+    .type {
+      right: 70px;
+    }
+    img.karma {
+      right: 42px;
+      top: 32px;
+    }
+    .panel {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: visibility 0s, opacity 1s 0.2s;
+      -moz-transition: visibility 0s, opacity 1s 0.2s;
+      -o-transition: visibility 0s, opacity 1s 0.2s;
+      transition: visibility 0s, opacity 1s 0.2s;
+    }
+  }
+}
+
+/* line 138, ../../sass/_user-list.scss */
+
+/* line 143, ../../sass/_user-list.scss */
+
+/* line 146, ../../sass/_user-list.scss */
+
+/* line 149, ../../sass/_user-list.scss */
+
+/* line 158, ../../sass/_user-list.scss */
+
+/* line 161, ../../sass/_user-list.scss */
+
+/* line 164, ../../sass/_user-list.scss */
+
+/* line 167, ../../sass/_user-list.scss */
+
+/* line 171, ../../sass/_user-list.scss */
+
+/* line 5, ../../sass/_basic-tab.scss */
+
+.basic-tab, #chat #chat-rooms ul li {
+  border-bottom: none;
+  border-top: 1px solid #bababa;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* line 22, ../../sass/_basic-tab.scss */
+
+.basic-tab:hover, #chat #chat-rooms ul li:hover, .basic-tab:active, #chat #chat-rooms ul li:active, .basic-tab.active, #chat #chat-rooms ul li.active, .basic-tab.selected, #chat #chat-rooms ul li.selected, .basic-tab.ui-tabs-selected, #chat #chat-rooms ul li.ui-tabs-selected {
+  text-decoration: none;
+  color: #111111;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+/* line 29, ../../sass/_basic-tab.scss */
+
+.ie {
+  .basic-tab, #chat #chat-rooms ul li {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+}
+
+#chat #chat-rooms ul .ie li {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+/* line 32, ../../sass/_basic-tab.scss */
+
+.ie {
+  .basic-tab:hover, #chat #chat-rooms ul li:hover {
+    background: #fafafa;
+  }
+}
+
+#chat #chat-rooms ul .ie li:hover {
+  background: #fafafa;
+}
+
+.ie {
+  .basic-tab:active, #chat #chat-rooms ul li:active {
+    background: #fafafa;
+  }
+}
+
+#chat #chat-rooms ul .ie li:active {
+  background: #fafafa;
+}
+
+.ie {
+  .basic-tab.active, #chat #chat-rooms ul li.active {
+    background: #fafafa;
+  }
+}
+
+#chat #chat-rooms ul .ie li.active {
+  background: #fafafa;
+}
+
+.ie {
+  .basic-tab.selected, #chat #chat-rooms ul li.selected {
+    background: #fafafa;
+  }
+}
+
+#chat #chat-rooms ul .ie li.selected {
+  background: #fafafa;
+}
+
+/* line 37, ../../sass/_basic-tab.scss */
+
+.basic-tab .ui-icon-close, #chat #chat-rooms ul li .ui-icon-close {
+  background-position: -83px -131px;
+  width: 12px;
+  height: 12px;
+  float: left;
+  cursor: pointer;
+  margin: 9px 3px 0 0;
+}
+
+/* line 46, ../../sass/_basic-tab.scss */
+
+.basic-tab.ui-state-light-highlight a span {
+  color: #799058;
+}
+
+#chat {
+  #chat-rooms {
+    ul {
+      li {
+        &.ui-state-light-highlight a span, &.selected {
+          color: #799058;
+        }
+        white-space: nowrap;
+        a {
+          outline: none;
+        }
+      }
+      border: none;
+      background: none;
+    }
+    /* when height changes, javascript will adjust where #chat-content starts */
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 30px 20px 0px;
+    line-height: 18px;
+    min-height: 31px;
+    font-size: 13px;
+    border: none;
+    background: none;
+    > span {
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+    #chat-rooms-add-button {
+      float: right;
+      margin: 8px 10px 0 10px;
+      color: #a2a2a2;
+      height: 22px;
+      span {
+        display: none;
+      }
+      &:before {
+        font-size: 50px;
+        font-family: "EntypoRegular", sans-serif;
+        content: ']';
+        position: relative;
+        top: -14px;
+        left: -1px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .chat-content {
+    position: absolute;
+    /* javascript updates this top value when #chat-rooms grows */
+    top: 63px;
+    bottom: 55px;
+    left: 20px;
+    right: 20px;
+    min-height: 250px;
+    line-height: 20px;
+    background: white;
+    li {
+      position: relative;
+      z-index: 0;
+      padding: 10px 25px 10px 15px;
+      margin: 0px 1px;
+      line-height: 1.3;
+      h4 {
+        display: inline-block;
+        font-size: 13px;
+        color: #799058;
+        > span {
+          max-width: 285px;
+        }
+      }
+      h5 {
+        float: right;
+        clear: right;
+        font-size: 13px;
+        color: #666666;
+        margin-left: 1em;
+      }
+      h6 {
+        float: right;
+        visibility: hidden;
+        display: block;
+        height: 16px;
+        a {
+          display: inline-block;
+          color: #999999;
+          cursor: pointer;
+          margin-top: -4px;
+          height: 20px;
+          min-width: 20px;
+          text-align: center;
+          overflow: hidden;
+          span {
+            display: none;
+          }
+          &:hover {
+            color: #5a7b2a;
+          }
+          &:before {
+            font-family: "EntypoRegular", sans-serif;
+            font-size: 40px;
+            display: inline-block;
+            position: relative;
+            top: -21px;
+          }
+        }
+        .translate {
+          &:before {
+            content: '9';
+          }
+          &.translating:before {
+            content: 'R';
+          }
+          &.translated:before {
+            content: 'g';
+          }
+        }
+        .give_karma {
+          &:before {
+            content: '8';
+          }
+          &.given:before {
+            content: 'W';
+          }
+          &.error:before {
+            content: 'X';
+          }
+        }
+      }
+      &:hover h6 {
+        visibility: visible;
+      }
+      p {
+        color: #444444;
+        b {
+          color: #991100;
+        }
+        a {
+          color: #24566f;
+        }
+        &.bold {
+          color: #991100;
+          a {
+            color: #24566f;
+          }
+        }
+      }
+      &.announcement {
+        background: #acbc96;
+        color: white;
+        h6 a {
+          color: white;
+          &:hover {
+            color: #dddddd;
+          }
+        }
+        p {
+          color: white;
+        }
+        &:nth-child(even), &.even {
+          background: #8ca26d;
+        }
+      }
+      &:not(.announcement) {
+        &:nth-child(even), &.even {
+          background: whitesmoke;
+        }
+      }
+      &.channel-manager-item .channel-name {
+        color: #941c1e;
+      }
+    }
+  }
+}
+
+/* line 3, ../../sass/_chat-rooms.scss */
+
+/* line 19, ../../sass/_chat-rooms.scss */
+
+/* line 24, ../../sass/_chat-rooms.scss */
+
+/* line 30, ../../sass/_chat-rooms.scss */
+
+/* line 35, ../../sass/_chat-rooms.scss */
+
+/* line 39, ../../sass/_chat-rooms.scss */
+
+/* line 45, ../../sass/_chat-rooms.scss */
+
+/* line 51, ../../sass/_chat-rooms.scss */
+
+/* line 54, ../../sass/_chat-rooms.scss */
+
+/* line 64, ../../sass/_chat-rooms.scss */
+
+/* line 5, ../../sass/_chat-content.scss */
+
+/* line 20, ../../sass/_chat-content.scss */
+
+/* line 26, ../../sass/_chat-content.scss */
+
+/* line 31, ../../sass/_chat-content.scss */
+
+/* line 40, ../../sass/_chat-content.scss */
+
+/* line 47, ../../sass/_chat-content.scss */
+
+/* line 52, ../../sass/_chat-content.scss */
+
+/* line 61, ../../sass/_chat-content.scss */
+
+/* line 64, ../../sass/_chat-content.scss */
+
+/* line 67, ../../sass/_chat-content.scss */
+
+/* line 75, ../../sass/_chat-content.scss */
+
+/* line 78, ../../sass/_chat-content.scss */
+
+/* line 81, ../../sass/_chat-content.scss */
+
+/* line 84, ../../sass/_chat-content.scss */
+
+/* line 87, ../../sass/_chat-content.scss */
+
+/* line 90, ../../sass/_chat-content.scss */
+
+/* line 94, ../../sass/_chat-content.scss */
+
+/* line 97, ../../sass/_chat-content.scss */
+
+/* line 103, ../../sass/_chat-content.scss */
+
+/* line 107, ../../sass/_chat-content.scss */
+
+/* line 112, ../../sass/_chat-content.scss */
+
+/* line 116, ../../sass/_chat-content.scss */
+
+/* line 121, ../../sass/_chat-content.scss */
+
+/* line 126, ../../sass/_chat-content.scss */
+
+/* line 128, ../../sass/_chat-content.scss */
+
+/* line 133, ../../sass/_chat-content.scss */
+
+/* line 137, ../../sass/_chat-content.scss */
+
+/* line 141, ../../sass/_chat-content.scss */
+
+/* line 146, ../../sass/_chat-content.scss */
+
+/* line 150, ../../sass/_chat-content.scss */
+
+/* line 156, ../../sass/_cha      padding: 3px;t-content.scss */
+
+/* line 169, ../../sass/_chat-content.scss */
+
+.ie8 #chat .chat-content, .ie9 #chat .chat-content {
+  border: 1px solid #ccc;
+}
+
+/* line 3, ../../sass/_chat-entry.scss */
+
+#chat {
+  .chat-entry {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    height: 32px;
+    > form > div {
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      right: 44px;
+      position: absolute;
+    }
+    .chat-entry-input {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 96%;
+      padding: 7px 2%;
+      margin: 0px;
+      outline: none;
+    }
+    .user-list-toggle-button {
+      position: absolute;
+      top: 1px;
+      right: 0px;
+      width: 32px;
+      height: 28px;
+      color: #333333;
+      border: 1px solid whitesmoke;
+      box-shadow: 1px 1px 1px #aaaaaa;
+      border-radius: 4px;
+      cursor: pointer;
+      span {
+        display: none;
+      }
+      &:hover {
+        color: #5a7b2a;
+      }
+      &:before {
+        font-family: "EntypoRegular", sans-serif;
+        font-size: 40px;
+        display: inline-block;
+        content: '+';
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+      }
+      .friends {
+        font-size: 10px;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        background: #941c1e;
+        display: block;
+        margin: 0px;
+      }
+    }
+  }
+  position: absolute;
+  right: 551px;
+  top: 0;
+  bottom: 0;
+  width: 429px;
+  z-index: 1;
+  background: #e9e9e9;
+  border-right: 1px solid white;
+  box-shadow: -3px 0px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: width 1s 0.2s;
+  -moz-transition: width 1s 0.2s;
+  -o-transition: width 1s 0.2s;
+  transition: width 1s 0.2s;
+  /*
+      -webkit-transition: margin-left 1s 0.2s;
+      -moz-transition: margin-left 1s 0.2s;
+      -o-transition: margin-left 1s 0.2s;
+      transition: margin-left 1s 0.2s;
+
+      left: 0px;
+
+      .user-list-slid-open & {
+          margin-left: 279px;
+      }
+
+      .user-list-popped-out &,
+      .user-list-slid-close:not(.user-list-slid-open) & {
+          margin-left: 0px;
+      }
+  */
+}
+
+/* line 10, ../../sass/_chat-entry.scss */
+
+/* line 18, ../../sass/_chat-entry.scss */
+
+/* line 32, ../../sass/_chat-entry.scss */
+
+/* line 45, ../../sass/_chat-entry.scss */
+
+/* line 48, ../../sass/_chat-entry.scss */
+
+/* line 54, ../../sass/_chat-entry.scss */
+
+/* line 63, ../../sass/_chat-entry.scss */
+
+/* line 5, ../../sass/_chat.scss */
+
+/* line 6, ../../sass/_game-list-create-game.scss */
+
+#game-list #game-list-content #game-list-create-game > {
+  .buttons {
+    padding: 20px 0;
+    text-align: center;
+    .big-button {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      &.green {
+        background: #5a7b2a;
+        background-image: linear-gradient(bottom, #2e4710 0%, #5b7b2a 100%);
+        background-image: -o-linear-gradient(bottom, #2e4710 0%, #5b7b2a 100%);
+        background-image: -moz-linear-gradient(bottom, #2e4710 0%, #5b7b2a 100%);
+        background-image: -webkit-linear-gradient(bottom, #2e4710 0%, #5b7b2a 100%);
+        background-image: -ms-linear-gradient(bottom, #2e4710 0%, #5b7b2a 100%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2e4710), color-stop(1, #5b7b2a));
+        &:hover {
+          background: #789b41;
+          background-image: linear-gradient(bottom, #5b7b2a 0%, #799b41 100%);
+          background-image: -o-linear-gradient(bottom, #5b7b2a 0%, #799b41 100%);
+          background-image: -moz-linear-gradient(bottom, #5b7b2a 0%, #799b41 100%);
+          background-image: -webkit-linear-gradient(bottom, #5b7b2a 0%, #799b41 100%);
+          background-image: -ms-linear-gradient(bottom, #5b7b2a 0%, #799b41 100%);
+          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #5b7b2a), color-stop(1, #799b41));
+        }
+      }
+      &.red {
+        background: #941c1e;
+        background-image: linear-gradient(bottom, #941c1e 0%, #ad2124 100%);
+        background-image: -o-linear-gradient(bottom, #941c1e 0%, #ad2124 100%);
+        background-image: -moz-linear-gradient(bottom, #941c1e 0%, #ad2124 100%);
+        background-image: -webkit-linear-gradient(bottom, #941c1e 0%, #ad2124 100%);
+        background-image: -ms-linear-gradient(bottom, #941c1e 0%, #ad2124 100%);
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #941c1e), color-stop(1, #ad2124));
+        &:hover {
+          background: #ad2123;
+          background-image: linear-gradient(bottom, #ad2124 0%, #c72629 100%);
+          background-image: -o-linear-gradient(bottom, #ad2124 0%, #c72629 100%);
+          background-image: -moz-linear-gradient(bottom, #ad2124 0%, #c72629 100%);
+          background-image: -webkit-linear-gradient(bottom, #ad2124 0%, #c72629 100%);
+          background-image: -ms-linear-gradient(bottom, #ad2124 0%, #c72629 100%);
+          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ad2124), color-stop(1, #c72629));
+        }
+      }
+      &:after {
+        font-family: "EntypoRegular", sans-serif;
+        font-weight: normal;
+        font-size: 70px;
+        margin-left: 20px;
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        vertical-align: bottom;
+      }
+      &#create-game:after {
+        content: ']';
+      }
+      &#resume-game:after {
+        content: 'h';
+      }
+      &#close-game:after {
+        content: 'X';
+      }
+    }
+    a.simple-link {
+      color: #799058;
+    }
+  }
+  form {
+    display: none;
+  }
+}
+
+/* line 10, ../../sass/_game-list-create-game.scss */
+
+/* line 22, ../../sass/_game-list-create-game.scss */
+
+/* line 40, ../../sass/_game-list-create-game.scss */
+
+/* line 60, ../../sass/_game-list-create-game.scss */
+
+/* line 77, ../../sass/_game-list-create-game.scss */
+
+/* line 97, ../../sass/_game-list-create-game.scss */
+
+/* line 108, ../../sass/_game-list-create-game.scss */
+
+/* line 112, ../../sass/_game-list-create-game.scss */
+
+/* line 116, ../../sass/_game-list-create-game.scss */
+
+/* line 121, ../../sass/_game-list-create-game.scss */
+
+/* line 129, ../../sass/_game-list-create-game.scss */
+
+/* line 2, ../../sass/_game-info.scss */
+
+#game-info {
+  display: none;
+  div.tabs {
+    width: 300px;
+    ul li a {
+      outline: none;
+    }
+    > div {
+      padding: 10px;
+    }
+  }
+  span.notice {
+    color: #941c1e;
+  }
+  div.game-info-challenge-conditions {
+    margin: 8px 20px;
+    padding: 0px 15px;
+    background: url("/resources/img/right_arrow.png") no-repeat left center;
+    a {
+      text-decoration: none;
+    }
+    &.disabled {
+      background: url("/resources/img/right_arrow_gray.png") no-repeat left center;
+      a {
+        color: #999999;
+        cursor: default;
+      }
+    }
+    &:not(.disabled) a:hover {
+      color: #471;
+    }
+    &.displayed {
+      background: url("/resources/img/kaya_player_down.png") no-repeat left center;
+    }
+  }
+  table {
+    th {
+      text-align: right;
+      padding: 3px;
+      vertical-align: middle;
+      width: 130px;
+    }
+    td {
+      padding: 3px;
+      vertical-align: middle;
+      &[colspan="2"] {
+        width: 150px;
+      }
+    }
+    input {
+      border: 1px solid #a9a9a9;
+      border-radius: 2px;
+      &[type=number] {
+        width: 50px;
+        margin: 2px;
+      }
+      &[data-field=challenge_conditions-komi] {
+        text-align: right;
+      }
+      &[type=checkbox] {
+        outline: none;
+      }
+    }
+  }
+  div {
+    &.button-panel {
+      text-align: right;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #AAA;
+    }
+    &.league-info {
+      height: 70px;
+      padding: 44px 10px 10px;
+      text-align: center;
+      a {
+        color: #24566f;
+      }
+    }
+  }
+}
+
+/* line 5, ../../sass/_game-info.scss */
+
+/* line 8, ../../sass/_game-info.scss */
+
+/* line 12, ../../sass/_game-info.scss */
+
+/* line 17, ../../sass/_game-info.scss */
+
+/* line 21, ../../sass/_game-info.scss */
+
+/* line 28, ../../sass/_game-info.scss */
+
+/* line 32, ../../sass/_game-info.scss */
+
+/* line 33, ../../sass/_game-info.scss */
+
+/* line 42, ../../sass/_game-info.scss */
+
+/* line 48, ../../sass/_game-info.scss */
+
+/* line 54, ../../sass/_game-info.scss */
+
+/* line 63, ../../sass/_game-info.scss */
+
+/* line 67, ../../sass/_game-info.scss */
+
+/* line 72, ../../sass/_game-info.scss */
+
+/* line 76, ../../sass/_game-info.scss */
+
+/* line 81, ../../sass/_game-info.scss */
+
+/* line 86, ../../sass/_game-info.scss */
+
+/* line 91, ../../sass/_game-info.scss */
+
+/* line 98, ../../sass/_game-info.scss */
+
+/* line 102, ../../sass/_game-info.scss */
+
+/* line 109, ../../sass/_game-info.scss */
+
+div.help-dialog div {
+  margin-bottom: 10px;
+  strong {
+    font-weight: bold;
+  }
+  p {
+    margin: 5px;
+    a {
+      color: #24566f;
+      outline: none;
+    }
+  }
+}
+
+/* line 111, ../../sass/_game-info.scss */
+
+/* line 114, ../../sass/_game-info.scss */
+
+/* line 116, ../../sass/_game-info.scss */
+
+/* line 124, ../../sass/_game-info.scss */
+
+.popup-visible {
+  -moz-transition: top 0.5s;
+  -webkit-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+/* line 9, ../../sass/_game-list.scss */
+
+#game-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 550px;
+  padding: 20px 0;
+  background: whitesmoke;
+  border-left: 1px solid #dddddd;
+  box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+  #game-list-title {
+    padding: 10px 10px 0px;
+  }
+  #game-list-controls {
+    padding: 16px 10px 10px 10px;
+    line-height: 20px;
+    min-height: 20px;
+    white-space: normal;
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    a {
+      display: inline-block;
+      margin-left: 0.3em;
+      > span {
+        font-size: 12px;
+        background: #941c1e;
+        margin-top: 3px;
+      }
+    }
+  }
+  #game-list-content {
+    position: absolute;
+    top: 79px;
+    bottom: 30px;
+    left: 0px;
+    right: 0px;
+    line-height: 20px;
+    li {
+      border-top: 1px solid #dddddd;
+      overflow: hidden;
+      padding: 15px 0;
+      .player-icon {
+        &.anonymous:before, &.anonymous-efon:before, &.bot:before {
+          content: '+';
+          display: inline-block;
+          font-family: "EntypoRegular", sans-serif;
+          font-size: 70px;
+          width: 80px;
+          height: 80px;
+          line-height: 65px;
+          text-align: center;
+          border: 1px solid #dddddd;
+        }
+      }
+      &.broadcast .player-icon:before, &.open .player-icon.white:before {
+        content: '+';
+        display: inline-block;
+        font-family: "EntypoRegular", sans-serif;
+        font-size: 70px;
+        width: 80px;
+        height: 80px;
+        line-height: 65px;
+        text-align: center;
+        border: 1px solid #dddddd;
+      }
+      .player-icon {
+        &.anonymous-efon:before, &.bot:before {
+          font-family: "EfonRegular", sans-serif;
+          font-size: 50px;
+        }
+      }
+      &.broadcast {
+        .player-icon {
+          color: #666666;
+        }
+        .observe-game:after {
+          content: 'D';
+        }
+      }
+      .player-icon.bot:before {
+        color: #5a7b2a;
+        content: 'x';
+      }
+      &.open {
+        .player-icon.white {
+          color: #941c1e;
+          &:before {
+            content: '-';
+          }
+        }
+        .players .white {
+          color: #941c1e;
+          &:before {
+            content: 'Join Match';
+          }
+        }
+        .observe-game {
+          /*
+                              &:after {
+                                  content: 'R'; // hourglass
+                                  background: transparent;
+                                  color: $icon-dark-green;
+                                  box-shadow: none;
+                                  text-shadow: 1px 1px 1px $content-shadow;
+                                  font-size: 60px;
+                              }
+          */
+          &:hover:after {
+            background: transparent;
+            color: #5a7b2a;
+          }
+        }
+      }
+      &.broadcast-game a.player-icon {
+        margin-left: 20px;
+      }
+      a.player-icon {
+        cursor: pointer;
+      }
+      div.player-icon {
+        background-image: url("/img/flags/un.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #dddddd;
+      }
+      .player-icon {
+        float: left;
+        width: 82px;
+        height: 82px;
+        &.white {
+          margin-left: 15px;
+          margin-right: 140px;
+        }
+        img {
+          border: 1px solid #dddddd;
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .players {
+        position: absolute;
+        left: 107px;
+        width: 120px;
+        color: #799058;
+        > {
+          span, a {
+            display: block;
+          }
+        }
+        .black > span, .white > span {
+          max-width: 90px;
+        }
+        div {
+          &.black, &.white {
+            color: #666666;
+          }
+        }
+        .vs {
+          line-height: 40px;
+          color: #999999;
+          font-size: 24px;
+          text-align: center;
+        }
+        .waiting, .karma {
+          font-size: 16px;
+          line-height: 1;
+          color: #999999;
+          text-align: center;
+        }
+        .waiting span, .karma span {
+          vertical-align: middle;
+        }
+        .black {
+          text-align: right;
+        }
+      }
+      .observe-game {
+        float: left;
+        margin: 0 0 0 20px;
+        cursor: pointer;
+        /*
+                        &:after {
+                            content: 'ê'; // right arrow
+                            display: inline-block;
+                            font-family: $font-entypo;
+                            font-size: 40px;
+                            margin-left: 8px;
+                            height: 30px;
+                            width: 30px;
+                            background: $icon-dark-green;
+                            color: $background-white;
+                            text-align: center;
+                            vertical-align: middle;
+                            border-radius: 100px;
+                            box-shadow: 1px 1px 1px $content-shadow;
+                        }
+        */
+        img {
+          width: 82px;
+          height: 82px;
+          vertical-align: middle;
+        }
+        &:hover ~ .status-bar {
+          color: #799058;
+        }
+      }
+      .purpose-bar {
+        float: left;
+        width: 82px;
+        height: 82px;
+        cursor: help;
+        text-align: center;
+        span {
+          word-wrap: break-word;
+        }
+      }
+      .status-bar {
+        float: left;
+        display: block;
+        padding: 0 0 0 10px;
+        width: 91px;
+        text-align: right;
+        line-height: 27px;
+        .observers:before {
+          content: ',';
+          display: inline-block;
+          font-family: "EntypoRegular", sans-serif;
+          font-size: 35px;
+          position: relative;
+          top: 4px;
+          margin-top: -8px;
+          margin-right: 2px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &.open-game .status-bar {
+        width: 184px;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 10px;
+      }
+      &.ongoing-game .status-bar:hover, &.sandbox-game .status-bar:hover, &.broadcast-game .status-bar:hover, &.replay-game .status-bar:hover {
+        color: #799058;
+        cursor: pointer;
+      }
+      a.broadcaster {
+        display: block;
+        float: left;
+        padding: 0 0 0 10px;
+        width: 109px;
+        text-align: left;
+        line-height: 24px;
+        color: #799058;
+        > span {
+          max-width: 78px;
+        }
+      }
+      &.broadcast-game .status-bar {
+        position: relative;
+        top: 6px;
+        line-height: 12px;
+        span.observers {
+          line-height: 31px;
+        }
+      }
+      &.compact span, &.compact-header span {
+        text-align: center;
+        display: inline-block;
+        padding: 0px 3px;
+      }
+      &.compact span {
+        &.white, &.black {
+          width: 155px;
+        }
+      }
+      &.compact-header span {
+        &.white, &.black {
+          width: 155px;
+        }
+      }
+      &.compact span.owner, &.compact-header span.owner {
+        width: 316px;
+      }
+      &.compact span {
+        &.size, &.handicap, &.moves, &.observers {
+          width: 40px;
+        }
+      }
+      &.compact-header span {
+        &.size, &.handicap, &.moves, &.observers {
+          width: 40px;
+        }
+      }
+      &.compact span b, &.compact-header span b {
+        font-size: 11px;
+        position: relative;
+        top: -3px;
+      }
+      &.compact a.compact-link, &.compact-header a.compact-link {
+        display: inline-block;
+        color: #999999;
+        outline: none;
+      }
+      &.compact a.compact-link:hover, &.compact-header a.compact-link:hover {
+        color: #5a7b2a;
+        text-decoration: none;
+      }
+      &.compact a.compact-link:before, &.compact-header a.compact-link:before {
+        line-height: 0;
+        font-family: "EntypoRegular", sans-serif;
+        font-size: 40px;
+        position: relative;
+        top: 6px;
+      }
+      &.compact a.compact-link.watch:before, &.compact-header a.compact-link.watch:before {
+        content: 'M';
+      }
+      &.compact a.compact-link span {
+        display: none;
+      }
+      &.compact-header {
+        a.compact-link span {
+          display: none;
+        }
+        padding: 3px 0px;
+        font-weight: 600;
+        border-top: none;
+      }
+      &.compact-title {
+        padding: 3px 0px;
+        font-weight: 600;
+        border-top: none;
+        padding: 15px 5px 3px;
+        border-bottom: 1px solid #dddddd;
+      }
+      &.compact {
+        border-bottom: 1px solid #dddddd;
+        border-top: none;
+        padding: 3px 0px;
+        background-color: white;
+        &:nth-child(even), &.even {
+          background-color: #fbfbfb;
+        }
+      }
+    }
+    div.game-entry-buttons {
+      float: left;
+      width: 91px;
+      padding: 5px;
+      text-align: center;
+      a {
+        &.play-game {
+          display: inline-block;
+          font-size: 20px;
+          border-radius: 50px;
+          padding: 8px 20px;
+          line-height: normal;
+          margin-bottom: 10px;
+        }
+        &.play-game-orange {
+          display: inline-block;
+          font-size: 20px;
+          border-radius: 50px;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          box-shadow: 1px 1px 0px yellow inset;
+          background-color: #ff9632;
+          border: 1px solid #ff9632;
+          background-image: linear-gradient(bottom, #ffa200 13%, #fac832 57%);
+          background-image: -o-linear-gradient(bottom, #ffa200 13%, #fac832 57%);
+          background-image: -moz-linear-gradient(bottom, #ffa200 13%, #fac832 57%);
+          background-image: -webkit-linear-gradient(bottom, #ffa200 13%, #fac832 57%);
+          background-image: -ms-linear-gradient(bottom, #ffa200 13%, #fac832 57%);
+          background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.13, #ffa200), color-stop(0.57, #fac832));
+          /*
+                          box-shadow: 1px 1px 0px rgb(167,222,77) inset;
+                          background-color: rgb(134,179,62);
+                          border: 1px solid rgb(134,179,62);
+                          color: #333;
+
+                          background-image: linear-gradient(bottom, rgb(91,123,42) 0%, rgb(134,179,62) 50%);
+                          background-image: -o-linear-gradient(bottom, rgb(91,123,42) 0%, rgb(134,179,62) 50%);
+                          background-image: -moz-linear-gradient(bottom, rgb(91,123,42) 0%, rgb(134,179,62) 50%);
+                          background-image: -webkit-linear-gradient(bottom, rgb(91,123,42) 0%, rgb(134,179,62) 50%);
+                          background-image: -ms-linear-gradient(bottom, rgb(91,123,42) 0%, rgb(134,179,62) 50%);
+
+                          background-image: -webkit-gradient(
+                              linear,
+                              left bottom,
+                              left top,
+                              color-stop(0, rgb(91,123,42)),
+                              color-stop(0.5, rgb(134,179,62))
+                          );
+          */
+          &:hover {
+            text-decoration: none;
+            background-image: none;
+            box-shadow: 1px 1px 0px #c2ff59 inset;
+            border: 1px solid #a7de4d;
+            color: #555;
+            background-image: linear-gradient(bottom, #85b348 0%, #a7de4d 50%);
+            background-image: -o-linear-gradient(bottom, #85b348 0%, #a7de4d 50%);
+            background-image: -moz-linear-gradient(bottom, #85b348 0%, #a7de4d 50%);
+            background-image: -webkit-linear-gradient(bottom, #85b348 0%, #a7de4d 50%);
+            background-image: -ms-linear-gradient(bottom, #85b348 0%, #a7de4d 50%);
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #85b348), color-stop(0.5, #a7de4d));
+          }
+        }
+        &.trail-game {
+          font-weight: bold;
+          &:hover {
+            color: #799058;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* line 20, ../../sass/_game-list.scss */
+
+/* line 24, ../../sass/_game-list.scss */
+
+/* line 34, ../../sass/_game-list.scss */
+
+/* line 39, ../../sass/_game-list.scss */
+
+/* line 48, ../../sass/_game-list.scss */
+
+/* line 59, ../../sass/_game-list.scss */
+
+/* line 64, ../../sass/_game-list.scss */
+
+/* line 78, ../../sass/_game-list.scss */
+
+/* line 84, ../../sass/_game-list.scss */
+
+/* line 99, ../../sass/_game-list.scss */
+
+/* line 106, ../../sass/_game-list.scss */
+
+/* line 113, ../../sass/_game-list.scss */
+
+/* line 116, ../../sass/_game-list.scss */
+
+/* line 120, ../../sass/_game-list.scss */
+
+/* line 122, ../../sass/_game-list.scss */
+
+/* line 126, ../../sass/_game-list.scss */
+
+/* line 138, ../../sass/_game-list.scss */
+
+/* line 146, ../../sass/_game-list.scss */
+
+/* line 155, ../../sass/_game-list.scss */
+
+/* line 170, ../../sass/_game-list.scss */
+
+/* line 177, ../../sass/_game-list.scss */
+
+/* line 182, ../../sass/_game-list.scss */
+
+/* line 187, ../../sass/_game-list.scss */
+
+/* line 194, ../../sass/_game-list.scss */
+
+/* line 200, ../../sass/_game-list.scss */
+
+/* line 206, ../../sass/_game-list.scss */
+
+/* line 215, ../../sass/_game-list.scss */
+
+/* line 221, ../../sass/_game-list.scss */
+
+/* line 227, ../../sass/_game-list.scss */
+
+/* line 233, ../../sass/_game-list.scss */
+
+/* line 237, ../../sass/_game-list.scss */
+
+/* line 242, ../../sass/_game-list.scss */
+
+/* line 247, ../../sass/_game-list.scss */
+
+/* line 270, ../../sass/_game-list.scss */
+
+/* line 275, ../../sass/_game-list.scss */
+
+/* line 285, ../../sass/_game-list.scss */
+
+/* line 291, ../../sass/_game-list.scss */
+
+/* line 302, ../../sass/_game-list.scss */
+
+/* line 314, ../../sass/_game-list.scss */
+
+/* line 320, ../../sass/_game-list.scss */
+
+/* line 331, ../../sass/_game-list.scss */
+
+/* line 336, ../../sass/_game-list.scss */
+
+/* line 348, ../../sass/_game-list.scss */
+
+/* line 353, ../../sass/_game-list.scss */
+
+/* line 358, ../../sass/_game-list.scss */
+
+/* line 364, ../../sass/_game-list.scss */
+
+/* line 370, ../../sass/_game-list.scss */
+
+/* line 373, ../../sass/_game-list.scss */
+
+/* line 376, ../../sass/_game-list.scss */
+
+/* line 379, ../../sass/_game-list.scss */
+
+/* line 386, ../../sass/_game-list.scss */
+
+/* line 391, ../../sass/_game-list.scss */
+
+/* line 396, ../../sass/_game-list.scss */
+
+/* line 404, ../../sass/_game-list.scss */
+
+/* line 408, ../../sass/_game-list.scss */
+
+/* line 414, ../../sass/_game-list.scss */
+
+/* line 420, ../../sass/_game-list.scss */
+
+/* line 425, ../../sass/_game-list.scss */
+
+/* line 432, ../../sass/_game-list.scss */
+
+/* line 435, ../../sass/_game-list.scss */
+
+/* line 441, ../../sass/_game-list.scss */
+
+/* line 447, ../../sass/_game-list.scss */
+
+/* line 458, ../../sass/_game-list.scss */
+
+/* line 506, ../../sass/_game-list.scss */
+
+/* line 531, ../../sass/_game-list.scss */
+
+/* line 534, ../../sass/_game-list.scss */
+
+/* line 543, ../../sass/_game-list.scss */
+
+#tpl-game-list-entries {
+  display: none;
+}

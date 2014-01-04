@@ -1,0 +1,54 @@
+<!-- User List -->
+<div id="user-list">
+    <div id="user-list-shiv"></div>
+
+    <div id="user-list-content" class="inset-shadow">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport"><div class="overview">
+        </div></div>
+    </div>
+
+    <div id=user-list-toolbar>
+        <a class="sort" title="Järjestä"><span>Järjestä</span><a/>
+        <a id="search_offline_button" class="search" title="Etsi"><span>Etsi</span></a>
+        <div id=user-list-toolbar-sort>
+            <a sort_method="nickname" class="sort-by name selected">Nimi</a>
+            <a sort_method="rank" class="sort-by rank">Taso</a>
+            <a sort_method="karma" class="sort-by karma">Karma</a>
+        </div>
+    </div>
+</div>
+
+<!-- Chat -->
+<div id="chat">
+    <div id="chat-rooms">
+        <ul></ul>
+    </div>
+</div>
+
+<!-- Game List -->
+<div id="game-list">
+    <div id="game-list-controls">
+        <a id="game-list-play-button" class="selected">Pelaa</a>
+        <a id="game-list-hot-button">Suositut</a>
+        <a id="game-list-friend-button">Ystävät</a>
+        <a id="game-list-all-button">Kaikki</a>
+    </div>
+    <div id="game-list-content">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport"><div class="overview">
+            <div id="game-list-create-game">
+                <div class="buttons">
+                    <a id="close-game" class="big-button red" style="display: none;">Sulje peli</a>
+                    <a id="resume-game" class="big-button green" style="display: none;">Jatka peliä</a>
+                    <a id="create-game" class="big-button green" style="display: none;">Aloita uusi peli</a><br />
+                    <a id="create-sandbox" class="simple-link">Luo hiekkalaatikko</a> or <a href="/gospeed/" class="simple-link" target="_blank">Load an SGF</a>.
+                </div>
+            </div>
+            <ol></ol>
+        </div></div>
+    </div>
+</div>
+
+<!-- Content Shadow -->
+<div id="content-shadow"></div>
