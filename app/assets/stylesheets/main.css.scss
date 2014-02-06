@@ -144,10 +144,6 @@ body {
   }
 }
 
-#footer span .ie8 .disconnected, .ie8 #footer span .reconnecting, #footer span .ie8 .reconnecting, .ie8 #chat #chat-rooms ul, #chat #chat-rooms .ie8 ul, .ie8 #chat .chat-content li p, #chat .chat-content li .ie8 p, .ie8 #chat .chat-content li p.bold, #chat .chat-content li .ie8 p.bold, .ie8 #game-list #game-list-content #game-list-create-game > .buttons .big-button, #game-list #game-list-content #game-list-create-game > .buttons .ie8 .big-button, .ie8 #game-info div.game-info-challenge-conditions, #game-info .ie8 div.game-info-challenge-conditions, .ie8 #game-info table th, #game-info table .ie8 th, .ie8 #game-list #game-list-content li .players .black, #game-list #game-list-content li .players .ie8 .black, .ie8 #game-list #game-list-content li .players .white, #game-list #game-list-content li .players .ie8 .white, .ie8 #game-list #game-list-content li .purpose-bar, #game-list #game-list-content li .ie8 .purpose-bar, .ie8 #game-list #game-list-content li .status-bar, #game-list #game-list-content li .ie8 .status-bar, .ie8 #game-list #game-list-content li a.broadcaster, #game-list #game-list-content li .ie8 a.broadcaster {
-  font-weight: bold;
-}
-
 /* line 5, ../../sass/main.scss */
 
 html {
@@ -488,10 +484,6 @@ a {
   #user-list .inset-shadow-shiv#user-list-content .viewport {
     margin: 0px;
   }
-}
-
-#user-list .cssscrollbar:not(.ie) .inset-shadow-shiv#user-list-content .viewport, .cssscrollbar:not(.ie) #user-list #chat .chat-content #user-list-content.chat-content-shadow .viewport, #user-list #chat .chat-content .cssscrollbar:not(.ie) #user-list-content.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #chat .chat-content #user-list #user-list-content.chat-content-shadow .viewport, #chat .chat-content #user-list .cssscrollbar:not(.ie) #user-list-content.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #user-list #user-list-content .scrollbar-container#user-list-content-shadow .viewport, #user-list #user-list-content .cssscrollbar:not(.ie) .scrollbar-container#user-list-content-shadow .viewport, .cssscrollbar:not(.ie) #user-list #user-list-content #chat #user-list-content-shadow.chat-content .viewport, #user-list #user-list-content #chat .cssscrollbar:not(.ie) #user-list-content-shadow.chat-content .viewport, .cssscrollbar:not(.ie) #chat #user-list #user-list-content #user-list-content-shadow.chat-content .viewport, #chat #user-list #user-list-content .cssscrollbar:not(.ie) #user-list-content-shadow.chat-content .viewport, .cssscrollbar:not(.ie) #chat .inset-shadow-shiv.chat-content .viewport, #chat .cssscrollbar:not(.ie) .inset-shadow-shiv.chat-content .viewport, .cssscrollbar:not(.ie) #chat .chat-content .chat-content.chat-content-shadow .viewport, #chat .chat-content .cssscrollbar:not(.ie) .chat-content.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #chat .chat-content .scrollbar-container.chat-content-shadow .viewport, #chat .chat-content .cssscrollbar:not(.ie) .scrollbar-container.chat-content-shadow .viewport, .cssscrollbar:not(.ie) #chat .chat-content #game-list .chat-content-shadow#game-list-content .viewport, #chat .chat-content #game-list .cssscrollbar:not(.ie) .chat-content-shadow#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list #chat .chat-content .chat-content-shadow#game-list-content .viewport, #game-list #chat .chat-content .cssscrollbar:not(.ie) .chat-content-shadow#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list .inset-shadow-shiv#game-list-content .viewport, #game-list .cssscrollbar:not(.ie) .inset-shadow-shiv#game-list-content .viewport, .cssscrollbar:not(.ie) #user-list .inset-shadow#user-list-content .viewport, #user-list .cssscrollbar:not(.ie) .inset-shadow#user-list-content .viewport, .cssscrollbar:not(.ie) #user-list #chat .chat-entry #user-list-content.chat-entry-input .viewport, #user-list #chat .chat-entry .cssscrollbar:not(.ie) #user-list-content.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .chat-entry #user-list #user-list-content.chat-entry-input .viewport, #chat .chat-entry #user-list .cssscrollbar:not(.ie) #user-list-content.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .inset-shadow.chat-content .viewport, #chat .cssscrollbar:not(.ie) .inset-shadow.chat-content .viewport, .cssscrollbar:not(.ie) #chat .chat-entry .chat-content.chat-entry-input .viewport, #chat .chat-entry .cssscrollbar:not(.ie) .chat-content.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .chat-entry .scrollbar-container.chat-entry-input .viewport, #chat .chat-entry .cssscrollbar:not(.ie) .scrollbar-container.chat-entry-input .viewport, .cssscrollbar:not(.ie) #chat .chat-entry #game-list .chat-entry-input#game-list-content .viewport, #chat .chat-entry #game-list .cssscrollbar:not(.ie) .chat-entry-input#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list #chat .chat-entry .chat-entry-input#game-list-content .viewport, #game-list #chat .chat-entry .cssscrollbar:not(.ie) .chat-entry-input#game-list-content .viewport, .cssscrollbar:not(.ie) #game-list .inset-shadow#game-list-content .viewport, #game-list .cssscrollbar:not(.ie) .inset-shadow#game-list-content .viewport {
-  margin: 0px;
 }
 
 /* line 72, ../../sass/_scrollbar.scss */
@@ -906,7 +898,6 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  pointeEfonRegularr-events: none;
 }
 
 /* line 25, ../../sass/_inset-shadow.scss */
@@ -1149,7 +1140,6 @@ a {
 
 .ui-widget.ui-dialog {
   font-size: 12px !important;
-  vertical-align: normal;
 }
 
 /* line 89, ../../sass/main.scss */
