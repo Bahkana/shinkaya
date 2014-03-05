@@ -1,6 +1,6 @@
 <!-- User List -->
 <div id="user-list">
-    <div id="user-list-shiv"></div>
+    <div id="user-list-shiv">Nyuu</div>
 
     <div id="user-list-content" class="inset-shadow">
         <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
@@ -9,22 +9,18 @@
     </div>
 
     <div id=user-list-toolbar>
-        <a class="sort" title="Järjestä"><span>Järjestä</span><a/>
-        <a id="search_offline_button" class="search" title="Etsi"><span>Etsi</span></a>
+        <a class="Sort">Sort<a/>
+        <a id="search_offline_button" class="search" title="Search">Search</a>
         <div id=user-list-toolbar-sort>
-            <a sort_method="nickname" class="sort-by name selected">Nimi</a>
-            <a sort_method="rank" class="sort-by rank">Taso</a>
+            <a sort_method="nickname" class="sort-by name selected">Name</a>
+            <a sort_method="rank" class="sort-by rank">Level</a>
             <a sort_method="karma" class="sort-by karma">Karma</a>
         </div>
     </div>
 </div>
 
 <!-- Chat -->
-<div id="chat">
-    <div id="chat-rooms">
-        <ul></ul>
-    </div>
-</div>
+<%= render "chat" %>
 
 <!-- Game List -->
 <div id="game-list">

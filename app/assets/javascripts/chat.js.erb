@@ -1,0 +1,18 @@
+
+$(function() {
+    $("#chat-content").scrollTop(30000);
+
+    function refresh_chat() {
+        var last = $('#chat-content li:not(.fake):last');
+        $.post(<%=
+        #url_for controller: "chat_lines", action: "new_lines"
+        %>, {
+            timestamp: last.data-time
+        }, function(data, response) {
+            // TODO
+
+        });
+    }
+
+    window.setInterval(refresh_chat, 100);
+});

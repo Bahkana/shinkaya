@@ -1,0 +1,35 @@
+<div id="chat">
+  <div id="chat-rooms">
+    <a id="chat-rooms-add-button"><span>Add Room</span></a>
+    <div id="chat-rooms-content">
+      <a id="chat-rooms-main-room-button" class="selected">Main Room</a>
+      <a id="chat-rooms-development-button">Development</a>
+    </div>
+  </div>
+  <div id="chat-content">
+      <ol>
+        <!-- these data-user data-time elements are for your suggested use to
+             easily determine how to add a new <li> element recieved from the
+             server -->
+        <% @chat_lines.each do |line| %>
+
+        <li data-user="<%= line.user.username %>" data-time="<%= line.created_at %>">
+            <h6><a class=translate title=Translate><span>Translate</span></a></h6>
+            <h4><%= line.user.username %><strong>(<%= line.user.formatted_rank %>)</strong></h4>
+            <h5><%= line.created_at %></h5>
+            <%= line.content %>
+        </li>
+
+        <% end %>
+      </ol>
+  </div>
+    <div id="chat-entry">
+        <%= form_for :chat_line, url: chat_lines_path, remote: true do |f| %>
+            <%= f.text_field :content , placeholder: "Enter a message" %>
+            <%= f.submit %>
+        <% end %>
+        <!--
+    <a id=user-list-toggle-button><span>User list</span> <span class="friends">1</span></a>
+    -->
+    </div>
+</div>

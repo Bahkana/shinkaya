@@ -1,0 +1,12 @@
+$("#chat-content > ol").append('\
+<li data-user="<%= @chat_line.user.username %>" data-time="<%= @chat_line.created_at %>"> \
+    <h6><a class=translate title=Translate><span>Translate</span></a></h6> \
+    <h4><%= @chat_line.user.username %><strong>(<%= @chat_line.user.formatted_rank %>)</strong></h4> \
+    <h5><%= @chat_line.created_at %></h5> \
+    <%= @chat_line.content %> \
+</li> \
+');
+
+$("#chat-content").scrollTop(30000);
+
+$("#chat_line_content").val("");
